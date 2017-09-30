@@ -25,10 +25,18 @@ final class GridElem<TSub: Elem>: Elem {
     }
     
     func add(subElem: TSub) -> GridElem<TSub> {
-        return GridElem(pos: self.pos, grid: self.grid.add(elem: subElem))
+        return self.set(grid: self.grid.add(elem: subElem))
+    }
+    
+    func removeOne(subElem: TSub) throws -> GridElem<TSub> {
+        return self.set(grid: try self.grid.removeOne(elem: subElem))
     }
     
     override func set(pos newPos: CellPos) -> GridElem<TSub> {
         return GridElem(pos: newPos, grid: self.grid)
+    }
+    
+    func set(grid newGrid: Grid<TSub>) -> GridElem<TSub> {
+        return GridElem(pos: self.pos, grid: newGrid)
     }
 }

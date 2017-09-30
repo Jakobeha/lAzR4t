@@ -61,12 +61,12 @@ enum List<T> {
         var curRes = [T]()
         curRes.reserveCapacity(count)
         var remaining = self
-        for i in 0..<count {
+        for _ in 0..<count {
             switch remaining {
             case .empty:
                 fatalError("Remaining list empty before remaining length 0")
             case .cons(head: let next, rest: let newRemaining):
-                curRes[i] = next
+                curRes.append(next)
                 remaining = newRemaining
                 break
             }
@@ -74,9 +74,14 @@ enum List<T> {
         return curRes
     }
     
+    ///Creates a list with just one item
+    init(item: T) {
+        self = .cons(head: item, rest: .empty)
+    }
+    
     init(fromArray array: [T]) {
         var curSelf = List.empty
-        for item in array {
+        for item in array.reversed() {
             curSelf = .cons(head: item, rest: curSelf)
         }
         self = curSelf
@@ -103,6 +108,15 @@ enum List<T> {
             case .some(let newHead):
                 return .cons(head: newHead, rest: newRest)
             }
+        }
+    }
+    
+    func flatMap<T2>(_ transform: (T) throws -> List<T2>) rethrows -> List<T2> {
+        switch self {
+        case .empty:
+            return .empty
+        case .cons(let head, let rest):
+            return try transform(head) + rest.flatMap(transform)
         }
     }
     
@@ -139,6 +153,16 @@ enum List<T> {
             return try satisfies(head) || rest.contains(where: satisfies)
         }
     }
+    
+    ///How many items satisfy the condition
+    func count(onlyWhere satisfies: (T) throws -> Bool) rethrows -> Int {
+        switch self {
+        case .empty:
+            return 0
+        case .cons(let head, let rest):
+            return try (satisfies(head) ? 1 : 0) + rest.count(onlyWhere: satisfies)
+        }
+    }
 }
 
 extension List where T: Equatable {
@@ -155,8 +179,29 @@ extension List where T: Equatable {
         }
     }
     
+    static func !=(_ a: List<T>, _ b: List<T>) -> Bool {
+        return !(a == b)
+    }
+    
+    var withoutDuplicates: List<T> {
+        switch self {
+        case .empty:
+            return .empty
+        case .cons(let head, let rest):
+            return .cons(head: head, rest: rest.removeAll(head).withoutDuplicates)
+        }
+    }
+    
+    var numDuplicates: Int {
+        return count - withoutDuplicates.count
+    }
+    
     func contains(_ item: T) -> Bool {
         return contains { $0 == item }
+    }
+    
+    func count(of item: T) -> Int {
+        return count(onlyWhere: { $0 == item })
     }
     
     ///Throws an error if the item isn't removed
@@ -172,6 +217,22 @@ extension List where T: Equatable {
             }
         }
     }
+    
+    //Doesn't care if the item isn't even removed once
+    func removeAll(_ item: T) -> List<T> {
+        switch self {
+        case .empty:
+            return .empty
+        case .cons(let head, let rest):
+            let newRest = rest.removeAll(item)
+            if head == item {
+                return newRest
+            } else {
+                return .cons(head: head, rest: newRest)
+            }
+        }
+    }
+    
     ///Throws an error if the item isn't replaced
     func replaceOne(_ oldItem: T, with newItem: T) throws -> List<T> {
         switch self {

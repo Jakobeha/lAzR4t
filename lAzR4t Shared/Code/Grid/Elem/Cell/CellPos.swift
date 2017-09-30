@@ -25,4 +25,8 @@ struct CellPos {
     static func -(_ a: CellPos, _ b: CellPos) -> CellSize {
         return CellSize(width: a.x - b.x, height: a.y - b.y)
     }
+    
+    var toSize: CellSize {
+        return CellSize(width: x, height: y)
+    }
 }

@@ -13,9 +13,9 @@ class CellFrame {
     let size: CellSize
     
     var left: Int { return pos.x }
-    var bottom: Int { return pos.y + size.height }
+    var bottom: Int { return pos.y }
     var right: Int { return pos.x + size.width }
-    var top: Int { return pos.y }
+    var top: Int { return pos.y + size.height }
     var width: Int { return size.width }
     var height: Int { return size.height }
     
@@ -26,7 +26,7 @@ class CellFrame {
     
     convenience init(left: Int, bottom: Int, right: Int, top: Int) {
         self.init(
-            pos: CellPos(x: left, y: top),
+            pos: CellPos(x: left, y: bottom),
             size: CellSize(width: right - left, height: top - bottom)
         )
     }

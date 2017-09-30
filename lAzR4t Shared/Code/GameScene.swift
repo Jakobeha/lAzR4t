@@ -10,22 +10,15 @@ import SpriteKit
 
 ///Renders the game.
 class GameScene: SKScene {
-    fileprivate let controller: GameController
-    private var curControlModes: [String:ControlMode] { return controller.curControlModes }
-    private var curTimeModes: [String:TimeMode] { return controller.curTimeModes }
+    var controller: GameController?
     
     required convenience init?(coder aDecoder: NSCoder) {
         fatalError("Can't decode GameScene. Create it with init(controller: GameController)")
     }
     
-    init(controller: GameController, size: CGSize) {
-        self.controller = controller
-        super.init(size: size)
-    }
-    
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
-        curTimeModes.values.forEach { $0.update(gameTime: currentTime) }
+        controller?.update(currentTime)
     }
 }
 
@@ -33,19 +26,19 @@ class GameScene: SKScene {
 // Touch-based event handling
 extension GameScene {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        curControlModes.values.forEach { $0.touchesBegan(touches, with: event) }
+        controller?.touchesBegan(touches, with: event)
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        curControlModes.values.forEach { $0.touchesMoved(touches, with: event) }
+        controller?.touchesMoved(touches, with: event)
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        curControlModes.values.forEach { $0.touchesEnded(touches, with: event) }
+        controller?.touchesEnded(touches, with: event)
     }
     
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
-        curControlModes.values.forEach { $0.touchesCancelled(touches, with: event) }
+        controller?.touchesCancelled(touches, with: event)
     }
 }
 #endif
@@ -54,15 +47,15 @@ extension GameScene {
 // Mouse-based event handling
 extension GameScene {
     override func mouseDown(with event: NSEvent) {
-        curControlModes.values.forEach { $0.mouseDown(with: event) }
+        controller?.mouseDown(with: event)
     }
     
     override func mouseDragged(with event: NSEvent) {
-        curControlModes.values.forEach { $0.mouseDragged(with: event) }
+        controller?.mouseDragged(with: event)
     }
     
     override func mouseUp(with event: NSEvent) {
-        curControlModes.values.forEach { $0.mouseUp(with: event) }
+        controller?.mouseUp(with: event)
     }
 }
 #endif

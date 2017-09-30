@@ -9,3 +9,5 @@
 import SpriteKit
 
 typealias ElemNode = SKNode
+typealias ElemSpriteNode = SKSpriteNode
+typealias ElemShapeNode = SKShapeNode

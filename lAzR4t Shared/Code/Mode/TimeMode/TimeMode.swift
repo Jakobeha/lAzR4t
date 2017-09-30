@@ -12,11 +12,13 @@ import Foundation
 protocol TimeMode {
     var baseTime: TimeInterval { get }
     
-    func update(liveTime: TimeInterval)
+    ///Returns the modes which will replace this one for future updates.
+    func update(liveTime: TimeInterval) -> [Mode]
 }
 
 extension TimeMode {
-    func update(gameTime: TimeInterval) {
-        update(liveTime: gameTime - baseTime)
+    ///Returns the modes which will replace this one for future updates.
+    func update(gameTime: TimeInterval) -> [Mode] {
+        return update(liveTime: gameTime - baseTime)
     }
 }

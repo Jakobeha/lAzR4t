@@ -23,16 +23,40 @@ class ListTests: XCTestCase {
     
     func testEquality() {
         XCTAssert(List<String>.empty == List<String>.empty)
-        XCTAssert(("A" + ("B" + ("C" + List<String>.empty))) == ("A" + ("B" + ("C" + List<String>.empty))))
-        XCTAssert(("A" + ("B" + ("C" + List<String>.empty))) != ("A" + ("B" + ("D" + List<String>.empty))))
-        XCTAssert(("A" + ("B" + ("C" + List<String>.empty))) != ("A" + ("B" + List<String>.empty)))
-        XCTAssert(("B" + ("C" + List<String>.empty)) != ("A" + ("B" + ("C" + List<String>.empty))))
+        XCTAssert(
+            List.cons(head: "A", rest: List.cons(head: "B", rest: List.cons(head: "C", rest: List<String>.empty))) ==
+            List.cons(head: "A", rest: List.cons(head: "B", rest: List.cons(head: "C", rest: List<String>.empty)))
+        )
+        XCTAssert(
+            List.cons(head: "A", rest: List.cons(head: "B", rest: List.cons(head: "C", rest: List<String>.empty))) !=
+            List.cons(head: "A", rest: List.cons(head: "B", rest: List.cons(head: "D", rest: List<String>.empty)))
+            )
+        XCTAssert(
+            List.cons(head: "A", rest: List.cons(head: "B", rest: List.cons(head: "C", rest: List<String>.empty))) !=
+            List.cons(head: "A", rest: List.cons(head: "B", rest: List<String>.empty))
+        )
+        XCTAssert(
+            List.cons(head: "B", rest: List.cons(head: "C", rest: List<String>.empty)) !=
+            List.cons(head: "A", rest: List.cons(head: "B", rest: List.cons(head: "C", rest: List<String>.empty)))
+        )
     }
     
-    func testFromList() {
+    func testFromArray() {
         XCTAssert(List(fromArray: []) == List<String>.empty)
-        XCTAssert(List(fromArray: ["a", "b", "c"]) == ("a" + ("b" + ("c" + List<String>.empty))))
-        XCTAssert(List(fromArray: ["a", "b"]) == ("a" + ("b" + List<String>.empty)))
+        XCTAssert(
+            List(fromArray: ["a", "b", "c"]) ==
+            List.cons(head: "a", rest: List.cons(head: "b", rest: List.cons(head: "c", rest: List<String>.empty)))
+        )
+        XCTAssert(
+            List(fromArray: ["a", "b", "c"]) !=
+            List.cons(head: "a", rest: List.cons(head: "b", rest: List<String>.empty))
+        )
+    }
+    
+    func testToArray() {
+        XCTAssert(List<String>.empty.toArray == [])
+        XCTAssertNotEqual(List(fromArray: ["a", "b", "c"]).toArray, ["a", "b"])
+        XCTAssertEqual(List(fromArray: ["a", "b", "c"]).toArray, ["a", "b", "c"])
     }
     
     func testContains() {

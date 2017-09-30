@@ -19,6 +19,12 @@ func *(_ a: CellPos, _ scale: CGFloat) -> CGPoint {
     )
 }
 
+extension Int {
+    var toDisplay: CGFloat {
+        return CGFloat(self) * CellDisplay.sideLength
+    }
+}
+
 extension CellPos {
     var toDisplay: CGPoint {
         return self * CellDisplay.sideLength
@@ -50,5 +56,36 @@ func *(_ a: CellFrame, _ scale: CGFloat) -> CGRect {
 extension CellFrame {
     var toDisplay: CGRect {
         return self * CellDisplay.sideLength
+    }
+}
+
+extension CellDirection {
+    var toRotation: CGFloat {
+        switch self {
+        case .up:
+            return CGFloat.pi / 2
+        case .upRight:
+            return CGFloat.pi / 4
+        case .right:
+            return 0
+        case .downRight:
+            return CGFloat.pi / -4
+        case .down:
+            return CGFloat.pi / -2
+        case .downLeft:
+            return CGFloat.pi * -0.75
+        case .left:
+            return CGFloat.pi
+        case .upLeft:
+            return CGFloat.pi * 0.75
+        }
+    }
+    
+    func displayOffset(in magnitude: CGFloat) -> CGSize {
+        let displayUnitOffset = unitOffset.toDisplay
+        return CGSize(
+            width: displayUnitOffset.width * magnitude,
+            height: displayUnitOffset.height * magnitude
+        )
     }
 }

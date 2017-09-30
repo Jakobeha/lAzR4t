@@ -15,15 +15,22 @@ import Foundation
 ///To give an idea, it *won't* handle animations, because if the game doesn't base any mechanics off of them.
 ///But it *will* handle projectile positions, because the game *does* use them to see if the projectiles collide.
 class GameModel {
-    private let controller: GameController
-    private let grid: GameGrid
+    static let gameSize: CellSize = CellSize(width: 15, height: 10)
+    static let empty: GameModel = GameModel.empty(size: GameModel.gameSize)
     
-    init(controller: GameController, grid: GameGrid) {
-        self.controller = controller
-        self.grid = grid
+    let players: [PlayerDirection:PlayerModel]
+    
+    ///Creates a GameModel to be put in a grid of `size`.
+    private static func empty(size: CellSize) -> GameModel {
+        return GameModel(players: Dictionary(
+            keys: PlayerDirection.all,
+            valueGetter: { direction in
+                return PlayerModel.empty(parentSize: size, direction: direction)
+            }
+        ))
     }
     
-    func set(grid newGrid: GameGrid) -> GameModel {
-        return GameModel(controller: self.controller, grid: newGrid)
+    init(players: [PlayerDirection:PlayerModel]) {
+        self.players = players
     }
 }

@@ -9,29 +9,29 @@
 import SpriteKit
 import CoreGraphics
 
-class GridElemNode: SKShapeNode {
+class GridElemNode: ElemShapeNode {
     static let regFillColor: SKColor = SKColor.clear
     static let regStrokeColor: SKColor = SKColor(calibratedWhite: 0.25, alpha: 1.0)
     static let regLineWidth: CGFloat = 1
 
-    static func path(cellFrame: CellFrame) -> CGPath {
+    static func path(cellSize: CellSize) -> CGPath {
         let curPath = CGMutablePath()
         
-        let xMin = CGFloat(cellFrame.left) * CellDisplay.sideLength
-        let xMax = CGFloat(cellFrame.right) * CellDisplay.sideLength
-        let yMin = CGFloat(cellFrame.bottom) * CellDisplay.sideLength
-        let yMax = CGFloat(cellFrame.top) * CellDisplay.sideLength
+        let xMin = 0 as CGFloat
+        let yMin = 0 as CGFloat
+        let xMax = cellSize.width.toDisplay
+        let yMax = cellSize.height.toDisplay
         
         //Horizontal columns
-        for cellY in cellFrame.bottom...cellFrame.top { //note: includes size.height
-            let y = CGFloat(cellY) * CellDisplay.sideLength
+        for cellY in 0...cellSize.height { //note: includes size.height
+            let y = cellY.toDisplay
             curPath.move(to: CGPoint(x: xMin, y: y))
             curPath.addLine(to: CGPoint(x: xMax, y: y))
         }
         
         //Vertical columns
-        for cellX in cellFrame.left...cellFrame.right { //note: includes size.width
-            let x = CGFloat(cellX) * CellDisplay.sideLength
+        for cellX in 0...cellSize.width { //note: includes size.width
+            let x = cellX.toDisplay
             curPath.move(to: CGPoint(x: x, y: yMin))
             curPath.addLine(to: CGPoint(x: x, y: yMax))
         }
@@ -39,26 +39,19 @@ class GridElemNode: SKShapeNode {
         return curPath
     }
     
-    let cellFrame: CellFrame
-    var displayFrame: CGRect {
-        return CGRect(
-            x: cellFrame.left,
-            y: cellFrame.bottom,
-            width: cellFrame.width,
-            height: cellFrame.height
-        )
-    }
-    
     required convenience init?(coder aDecoder: NSCoder) {
-        fatalError("Can't decode GridNode. Create it with init(size: CellSize)`")
+        fatalError("Can't decode GridElemNode. Create it with init(frame: CellFrame)`")
     }
     
-    init(cellFrame: CellFrame) {
-        self.cellFrame = cellFrame
+    init(cellSize: CellSize) {
         super.init()
-        self.path = GridElemNode.path(cellFrame: cellFrame)
-        self.fillColor = GridElemNode.regFillColor
-        self.strokeColor = GridElemNode.regStrokeColor
-        self.lineWidth = GridElemNode.regLineWidth
+        fillColor = GridElemNode.regFillColor
+        strokeColor = GridElemNode.regStrokeColor
+        lineWidth = GridElemNode.regLineWidth
+        reconfigure(cellSize: cellSize)
+    }
+    
+    func reconfigure(cellSize: CellSize) {
+        path = GridElemNode.path(cellSize: cellSize)
     }
 }

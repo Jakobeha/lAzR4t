@@ -13,46 +13,60 @@ class GridController<TElem: Elem>: Equatable {
     var curModel: Grid<TElem> { return _curModel }
     private var _curElems: List<ElemController<TElem>>
     var curElems: List<ElemController<TElem>> { return _curElems }
-    private var _onCurModelChange: () -> Void = { }
+    ///The node where elements in the grid will be added to.
+    let node: ElemNode
     
     static func ==(_ a: GridController<TElem>, _ b: GridController<TElem>) -> Bool {
         return a === b
     }
     
-    init(size: CellSize) {
-        _curModel = Grid.empty(size: size)
-        _curElems = List.empty
+    fileprivate init(curModel: Grid<TElem>, curElems: List<ElemController<TElem>>, node: ElemNode) {
+        self.node = node
+        _curModel = curModel
+        _curElems = curElems
+    }
+    
+    convenience init(size: CellSize, node: ElemNode) {
+        self.init(curModel: Grid.empty(size: size), curElems: List.empty, node: node)
     }
     
     func add(elem: ElemController<TElem>) {
         _curModel = _curModel.add(elem: elem.curModel)
         elem._add(parent: self)
-        _onCurModelChange()
+        if let elemNode = elem.node {
+            self.node.addChild(elemNode)
+        }
     }
     
+    ///note: Type param is unchecked, but needs to conform or equal TElem
     func removeOne(elem: ElemController<TElem>) throws {
         elem._remove(parent: self)
         _curModel = try _curModel.removeOne(elem: elem.curModel)
-        _onCurModelChange()
+        elem.node?.removeFromParent()
     }
     
     func replaceOne(oldElem: ElemController<TElem>, newElem: ElemController<TElem>) throws {
         oldElem._remove(parent: self)
         _curModel = try _curModel.replaceOne(oldElem: oldElem.curModel, newElem: newElem.curModel)
         newElem._add(parent: self)
-        _onCurModelChange()
-    }
-    
-    func onCurModelChange(_ action: @escaping () -> Void) {
-        let oldOnCurModelChange = _onCurModelChange
-        _onCurModelChange = {
-            oldOnCurModelChange()
-            action()
+        oldElem.node?.removeFromParent()
+        if let newElemNode = newElem.node {
+            self.node.addChild(newElemNode)
         }
     }
     
     internal func _replace(oldModel: TElem, newModel: TElem) {
         _curModel = try! _curModel.replaceOne(oldElem: oldModel, newElem: newModel)
+    }
+}
+
+extension GridController where TElem: ElemToController {
+    convenience init(curModel: Grid<TElem>, node: ElemNode) {
+        self.init(
+            curModel: curModel,
+            curElems: curModel.elems.map { $0.makeController() },
+            node: node
+        )
     }
 }
 

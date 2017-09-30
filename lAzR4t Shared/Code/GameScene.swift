@@ -10,26 +10,21 @@ import SpriteKit
 
 ///Renders the game.
 class GameScene: SKScene {
-    ///The regular size of all scenes
-    static let regSize: CGSize = CGSize(width: 1280, height: 768)
-    
     fileprivate let controller: GameController
-    var curControlModes: [String:ControlMode] { return controller.curControlModes }
-    var curTimeModes: [String:TimeMode] { return controller.curTimeModes }
+    let grid: GameGridNode
+    private var curControlModes: [String:ControlMode] { return controller.curControlModes }
+    private var curTimeModes: [String:TimeMode] { return controller.curTimeModes }
     
     required convenience init?(coder aDecoder: NSCoder) {
-        fatalError("Can't decode GameScene. Create it with `init(controller: GameController)`")
+        fatalError("Can't decode GameScene. Create it with init(controller: GameController)")
     }
     
-    init(controller: GameController) {
+    init(controller: GameController, grid: GameGridNode) {
         self.controller = controller
-        super.init(size: GameScene.regSize)
+        self.grid = grid
+        super.init(size: grid.displaySize)
         
-        setup()
-    }
-    
-    private func setup() {
-        
+        addChild(grid)
     }
     
     override func update(_ currentTime: TimeInterval) {

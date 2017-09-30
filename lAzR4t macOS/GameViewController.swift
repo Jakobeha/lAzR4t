@@ -11,11 +11,12 @@ import SpriteKit
 import GameplayKit
 
 class GameViewController: NSViewController {
-
+    static let gameSize: CellSize = CellSize(width: 20, height: 12)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let controller = GameController()
+        let controller = GameController(size: GameViewController.gameSize)
         
         // Present the scene
         let skView = self.view as! SKView

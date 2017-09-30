@@ -30,6 +30,42 @@
 		363C37331F7F348F006ED4C9 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C37311F7F348F006ED4C9 /* Dictionary.swift */; };
 		363C37341F7F348F006ED4C9 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C37311F7F348F006ED4C9 /* Dictionary.swift */; };
 		363C37351F7F348F006ED4C9 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C37311F7F348F006ED4C9 /* Dictionary.swift */; };
+		363C37371F7F3BE9006ED4C9 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C37361F7F3BE9006ED4C9 /* Grid.swift */; };
+		363C37381F7F3BE9006ED4C9 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C37361F7F3BE9006ED4C9 /* Grid.swift */; };
+		363C37391F7F3BE9006ED4C9 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C37361F7F3BE9006ED4C9 /* Grid.swift */; };
+		363C373A1F7F3BE9006ED4C9 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C37361F7F3BE9006ED4C9 /* Grid.swift */; };
+		363C373D1F7F3D4D006ED4C9 /* Elem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C373C1F7F3D4D006ED4C9 /* Elem.swift */; };
+		363C373E1F7F3D4D006ED4C9 /* Elem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C373C1F7F3D4D006ED4C9 /* Elem.swift */; };
+		363C373F1F7F3D4D006ED4C9 /* Elem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C373C1F7F3D4D006ED4C9 /* Elem.swift */; };
+		363C37401F7F3D4D006ED4C9 /* Elem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C373C1F7F3D4D006ED4C9 /* Elem.swift */; };
+		363C37421F7F3ECA006ED4C9 /* CellPos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C37411F7F3ECA006ED4C9 /* CellPos.swift */; };
+		363C37431F7F3ECA006ED4C9 /* CellPos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C37411F7F3ECA006ED4C9 /* CellPos.swift */; };
+		363C37441F7F3ECA006ED4C9 /* CellPos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C37411F7F3ECA006ED4C9 /* CellPos.swift */; };
+		363C37451F7F3ECA006ED4C9 /* CellPos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C37411F7F3ECA006ED4C9 /* CellPos.swift */; };
+		363C37471F7F3EE8006ED4C9 /* CellSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C37461F7F3EE8006ED4C9 /* CellSize.swift */; };
+		363C37481F7F3EE8006ED4C9 /* CellSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C37461F7F3EE8006ED4C9 /* CellSize.swift */; };
+		363C37491F7F3EE8006ED4C9 /* CellSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C37461F7F3EE8006ED4C9 /* CellSize.swift */; };
+		363C374A1F7F3EE8006ED4C9 /* CellSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C37461F7F3EE8006ED4C9 /* CellSize.swift */; };
+		363C374C1F7F3FA9006ED4C9 /* CellFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C374B1F7F3FA9006ED4C9 /* CellFrame.swift */; };
+		363C374D1F7F3FA9006ED4C9 /* CellFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C374B1F7F3FA9006ED4C9 /* CellFrame.swift */; };
+		363C374E1F7F3FA9006ED4C9 /* CellFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C374B1F7F3FA9006ED4C9 /* CellFrame.swift */; };
+		363C374F1F7F3FA9006ED4C9 /* CellFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C374B1F7F3FA9006ED4C9 /* CellFrame.swift */; };
+		363C37521F7F4251006ED4C9 /* SmallElem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C37511F7F4251006ED4C9 /* SmallElem.swift */; };
+		363C37531F7F4251006ED4C9 /* SmallElem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C37511F7F4251006ED4C9 /* SmallElem.swift */; };
+		363C37541F7F4251006ED4C9 /* SmallElem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C37511F7F4251006ED4C9 /* SmallElem.swift */; };
+		363C37551F7F4251006ED4C9 /* SmallElem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C37511F7F4251006ED4C9 /* SmallElem.swift */; };
+		363C37571F7F4F69006ED4C9 /* GameGridController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C37561F7F4F69006ED4C9 /* GameGridController.swift */; };
+		363C37581F7F4F69006ED4C9 /* GameGridController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C37561F7F4F69006ED4C9 /* GameGridController.swift */; };
+		363C37591F7F4F69006ED4C9 /* GameGridController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C37561F7F4F69006ED4C9 /* GameGridController.swift */; };
+		363C375A1F7F4F69006ED4C9 /* GameGridController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C37561F7F4F69006ED4C9 /* GameGridController.swift */; };
+		363C375D1F7F4F99006ED4C9 /* ElemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C375C1F7F4F99006ED4C9 /* ElemController.swift */; };
+		363C375E1F7F4F99006ED4C9 /* ElemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C375C1F7F4F99006ED4C9 /* ElemController.swift */; };
+		363C375F1F7F4F99006ED4C9 /* ElemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C375C1F7F4F99006ED4C9 /* ElemController.swift */; };
+		363C37601F7F4F99006ED4C9 /* ElemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C375C1F7F4F99006ED4C9 /* ElemController.swift */; };
+		363C37631F7F5022006ED4C9 /* CellDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C37621F7F5022006ED4C9 /* CellDisplay.swift */; };
+		363C37641F7F5022006ED4C9 /* CellDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C37621F7F5022006ED4C9 /* CellDisplay.swift */; };
+		363C37651F7F5022006ED4C9 /* CellDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C37621F7F5022006ED4C9 /* CellDisplay.swift */; };
+		363C37661F7F5022006ED4C9 /* CellDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C37621F7F5022006ED4C9 /* CellDisplay.swift */; };
 		3664F36F1F7F137E00C2DC36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3664F36E1F7F137E00C2DC36 /* AppDelegate.swift */; };
 		3664F3711F7F137E00C2DC36 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3664F3701F7F137E00C2DC36 /* GameViewController.swift */; };
 		3664F3741F7F137E00C2DC36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3664F3721F7F137E00C2DC36 /* Main.storyboard */; };
@@ -57,7 +93,11 @@
 		3664F3BB1F7F137F00C2DC36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3664F3661F7F137E00C2DC36 /* Assets.xcassets */; };
 		3664F3BC1F7F137F00C2DC36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3664F3661F7F137E00C2DC36 /* Assets.xcassets */; };
 		3664F3E41F7F188900C2DC36 /* ControlMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3664F3E31F7F188900C2DC36 /* ControlMode.swift */; };
-		3664F3EC1F7F19A900C2DC36 /* lAzR4tTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3664F3EB1F7F19A900C2DC36 /* lAzR4tTests.swift */; };
+		3664F3EC1F7F19A900C2DC36 /* GridFrameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3664F3EB1F7F19A900C2DC36 /* GridFrameTests.swift */; };
+		3676FB161F7F547300D83351 /* GameGridNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3676FB151F7F547300D83351 /* GameGridNode.swift */; };
+		3676FB171F7F547300D83351 /* GameGridNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3676FB151F7F547300D83351 /* GameGridNode.swift */; };
+		3676FB181F7F547300D83351 /* GameGridNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3676FB151F7F547300D83351 /* GameGridNode.swift */; };
+		3676FB191F7F547300D83351 /* GameGridNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3676FB151F7F547300D83351 /* GameGridNode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +155,15 @@
 		363C37191F7F2E0F006ED4C9 /* Mode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mode.swift; sourceTree = "<group>"; };
 		363C37201F7F2E4A006ED4C9 /* TimeMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeMode.swift; sourceTree = "<group>"; };
 		363C37311F7F348F006ED4C9 /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
+		363C37361F7F3BE9006ED4C9 /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
+		363C373C1F7F3D4D006ED4C9 /* Elem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Elem.swift; sourceTree = "<group>"; };
+		363C37411F7F3ECA006ED4C9 /* CellPos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellPos.swift; sourceTree = "<group>"; };
+		363C37461F7F3EE8006ED4C9 /* CellSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellSize.swift; sourceTree = "<group>"; };
+		363C374B1F7F3FA9006ED4C9 /* CellFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellFrame.swift; sourceTree = "<group>"; };
+		363C37511F7F4251006ED4C9 /* SmallElem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallElem.swift; sourceTree = "<group>"; };
+		363C37561F7F4F69006ED4C9 /* GameGridController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameGridController.swift; sourceTree = "<group>"; };
+		363C375C1F7F4F99006ED4C9 /* ElemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElemController.swift; sourceTree = "<group>"; };
+		363C37621F7F5022006ED4C9 /* CellDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellDisplay.swift; sourceTree = "<group>"; };
 		3664F3631F7F137E00C2DC36 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		3664F3651F7F137E00C2DC36 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		3664F3661F7F137E00C2DC36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -144,8 +193,9 @@
 		3664F3E11F7F14F300C2DC36 /* Textures */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Textures; sourceTree = "<group>"; };
 		3664F3E31F7F188900C2DC36 /* ControlMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlMode.swift; sourceTree = "<group>"; };
 		3664F3E91F7F19A900C2DC36 /* lAzR4tTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lAzR4tTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3664F3EB1F7F19A900C2DC36 /* lAzR4tTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lAzR4tTests.swift; sourceTree = "<group>"; };
+		3664F3EB1F7F19A900C2DC36 /* GridFrameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridFrameTests.swift; sourceTree = "<group>"; };
 		3664F3ED1F7F19A900C2DC36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3676FB151F7F547300D83351 /* GameGridNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameGridNode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,27 +237,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		363C37111F7F2A5F006ED4C9 /* GameController */ = {
-			isa = PBXGroup;
-			children = (
-				363C371E1F7F2E32006ED4C9 /* Mode */,
-				363C37191F7F2E0F006ED4C9 /* Mode.swift */,
-			);
-			path = GameController;
-			sourceTree = "<group>";
-		};
 		363C37121F7F2A6A006ED4C9 /* ControlMode */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = ControlMode;
-			sourceTree = "<group>";
-		};
-		363C37181F7F2CBF006ED4C9 /* GameModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = GameModel;
 			sourceTree = "<group>";
 		};
 		363C371E1F7F2E32006ED4C9 /* Mode */ = {
@@ -242,6 +276,28 @@
 				363C37311F7F348F006ED4C9 /* Dictionary.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		363C37501F7F423F006ED4C9 /* Elem */ = {
+			isa = PBXGroup;
+			children = (
+				363C37411F7F3ECA006ED4C9 /* CellPos.swift */,
+				363C37461F7F3EE8006ED4C9 /* CellSize.swift */,
+				363C374B1F7F3FA9006ED4C9 /* CellFrame.swift */,
+				363C37621F7F5022006ED4C9 /* CellDisplay.swift */,
+				363C37511F7F4251006ED4C9 /* SmallElem.swift */,
+			);
+			path = Elem;
+			sourceTree = "<group>";
+		};
+		363C375B1F7F4F89006ED4C9 /* Grid */ = {
+			isa = PBXGroup;
+			children = (
+				363C37501F7F423F006ED4C9 /* Elem */,
+				363C373C1F7F3D4D006ED4C9 /* Elem.swift */,
+				363C375C1F7F4F99006ED4C9 /* ElemController.swift */,
+			);
+			path = Grid;
 			sourceTree = "<group>";
 		};
 		3664F35D1F7F137E00C2DC36 = {
@@ -338,7 +394,7 @@
 		3664F3EA1F7F19A900C2DC36 /* lAzR4tTests */ = {
 			isa = PBXGroup;
 			children = (
-				3664F3EB1F7F19A900C2DC36 /* lAzR4tTests.swift */,
+				3664F3EB1F7F19A900C2DC36 /* GridFrameTests.swift */,
 				3664F3ED1F7F19A900C2DC36 /* Info.plist */,
 			);
 			path = lAzR4tTests;
@@ -348,13 +404,25 @@
 			isa = PBXGroup;
 			children = (
 				363C37301F7F3486006ED4C9 /* Core */,
-				363C37181F7F2CBF006ED4C9 /* GameModel */,
-				363C37111F7F2A5F006ED4C9 /* GameController */,
-				3664F3651F7F137E00C2DC36 /* GameScene.swift */,
+				3676FB141F7F53CC00D83351 /* Game */,
 				363C37041F7F1B98006ED4C9 /* GameController.swift */,
 				363C37061F7F1BD7006ED4C9 /* GameModel.swift */,
+				3664F3651F7F137E00C2DC36 /* GameScene.swift */,
 			);
 			path = Code;
+			sourceTree = "<group>";
+		};
+		3676FB141F7F53CC00D83351 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				363C375B1F7F4F89006ED4C9 /* Grid */,
+				363C371E1F7F2E32006ED4C9 /* Mode */,
+				363C37191F7F2E0F006ED4C9 /* Mode.swift */,
+				363C37561F7F4F69006ED4C9 /* GameGridController.swift */,
+				363C37361F7F3BE9006ED4C9 /* Grid.swift */,
+				3676FB151F7F547300D83351 /* GameGridNode.swift */,
+			);
+			path = Game;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -587,13 +655,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				363C37631F7F5022006ED4C9 /* CellDisplay.swift in Sources */,
 				3664F3B51F7F137F00C2DC36 /* GameScene.swift in Sources */,
 				363C37051F7F1B98006ED4C9 /* GameController.swift in Sources */,
+				363C37471F7F3EE8006ED4C9 /* CellSize.swift in Sources */,
 				363C371A1F7F2E0F006ED4C9 /* Mode.swift in Sources */,
 				3664F3711F7F137E00C2DC36 /* GameViewController.swift in Sources */,
 				3664F3E41F7F188900C2DC36 /* ControlMode.swift in Sources */,
 				363C37321F7F348F006ED4C9 /* Dictionary.swift in Sources */,
+				3676FB161F7F547300D83351 /* GameGridNode.swift in Sources */,
+				363C374C1F7F3FA9006ED4C9 /* CellFrame.swift in Sources */,
 				363C37211F7F2E4A006ED4C9 /* TimeMode.swift in Sources */,
+				363C37571F7F4F69006ED4C9 /* GameGridController.swift in Sources */,
+				363C37371F7F3BE9006ED4C9 /* Grid.swift in Sources */,
+				363C37521F7F4251006ED4C9 /* SmallElem.swift in Sources */,
+				363C37421F7F3ECA006ED4C9 /* CellPos.swift in Sources */,
+				363C373D1F7F3D4D006ED4C9 /* Elem.swift in Sources */,
+				363C375D1F7F4F99006ED4C9 /* ElemController.swift in Sources */,
 				3664F36F1F7F137E00C2DC36 /* AppDelegate.swift in Sources */,
 				363C37071F7F1BD7006ED4C9 /* GameModel.swift in Sources */,
 			);
@@ -603,13 +681,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				363C37641F7F5022006ED4C9 /* CellDisplay.swift in Sources */,
 				363C370E1F7F208F006ED4C9 /* ControlMode.swift in Sources */,
 				363C370C1F7F207F006ED4C9 /* GameController.swift in Sources */,
+				363C37481F7F3EE8006ED4C9 /* CellSize.swift in Sources */,
 				363C371B1F7F2E0F006ED4C9 /* Mode.swift in Sources */,
 				363C370D1F7F207F006ED4C9 /* GameModel.swift in Sources */,
 				3664F3B61F7F137F00C2DC36 /* GameScene.swift in Sources */,
 				363C37331F7F348F006ED4C9 /* Dictionary.swift in Sources */,
+				3676FB171F7F547300D83351 /* GameGridNode.swift in Sources */,
+				363C374D1F7F3FA9006ED4C9 /* CellFrame.swift in Sources */,
 				363C37221F7F2E4A006ED4C9 /* TimeMode.swift in Sources */,
+				363C37581F7F4F69006ED4C9 /* GameGridController.swift in Sources */,
+				363C37381F7F3BE9006ED4C9 /* Grid.swift in Sources */,
+				363C37531F7F4251006ED4C9 /* SmallElem.swift in Sources */,
+				363C37431F7F3ECA006ED4C9 /* CellPos.swift in Sources */,
+				363C373E1F7F3D4D006ED4C9 /* Elem.swift in Sources */,
+				363C375E1F7F4F99006ED4C9 /* ElemController.swift in Sources */,
 				3664F3901F7F137E00C2DC36 /* ExtensionDelegate.swift in Sources */,
 				3664F38E1F7F137E00C2DC36 /* InterfaceController.swift in Sources */,
 			);
@@ -619,13 +707,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				363C37651F7F5022006ED4C9 /* CellDisplay.swift in Sources */,
 				363C370F1F7F2094006ED4C9 /* ControlMode.swift in Sources */,
 				363C370A1F7F2079006ED4C9 /* GameController.swift in Sources */,
+				363C37491F7F3EE8006ED4C9 /* CellSize.swift in Sources */,
 				363C371C1F7F2E0F006ED4C9 /* Mode.swift in Sources */,
 				363C370B1F7F2079006ED4C9 /* GameModel.swift in Sources */,
 				3664F3B71F7F137F00C2DC36 /* GameScene.swift in Sources */,
 				363C37341F7F348F006ED4C9 /* Dictionary.swift in Sources */,
+				3676FB181F7F547300D83351 /* GameGridNode.swift in Sources */,
+				363C374E1F7F3FA9006ED4C9 /* CellFrame.swift in Sources */,
 				363C37231F7F2E4A006ED4C9 /* TimeMode.swift in Sources */,
+				363C37591F7F4F69006ED4C9 /* GameGridController.swift in Sources */,
+				363C37391F7F3BE9006ED4C9 /* Grid.swift in Sources */,
+				363C37541F7F4251006ED4C9 /* SmallElem.swift in Sources */,
+				363C37441F7F3ECA006ED4C9 /* CellPos.swift in Sources */,
+				363C373F1F7F3D4D006ED4C9 /* Elem.swift in Sources */,
+				363C375F1F7F4F99006ED4C9 /* ElemController.swift in Sources */,
 				3664F39B1F7F137E00C2DC36 /* GameViewController.swift in Sources */,
 				3664F3991F7F137E00C2DC36 /* AppDelegate.swift in Sources */,
 			);
@@ -635,13 +733,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				363C37661F7F5022006ED4C9 /* CellDisplay.swift in Sources */,
 				363C37101F7F209B006ED4C9 /* ControlMode.swift in Sources */,
 				363C37081F7F2069006ED4C9 /* GameController.swift in Sources */,
+				363C374A1F7F3EE8006ED4C9 /* CellSize.swift in Sources */,
 				363C371D1F7F2E0F006ED4C9 /* Mode.swift in Sources */,
 				363C37091F7F2069006ED4C9 /* GameModel.swift in Sources */,
 				3664F3B81F7F137F00C2DC36 /* GameScene.swift in Sources */,
 				363C37351F7F348F006ED4C9 /* Dictionary.swift in Sources */,
+				3676FB191F7F547300D83351 /* GameGridNode.swift in Sources */,
+				363C374F1F7F3FA9006ED4C9 /* CellFrame.swift in Sources */,
 				363C37241F7F2E4A006ED4C9 /* TimeMode.swift in Sources */,
+				363C375A1F7F4F69006ED4C9 /* GameGridController.swift in Sources */,
+				363C373A1F7F3BE9006ED4C9 /* Grid.swift in Sources */,
+				363C37551F7F4251006ED4C9 /* SmallElem.swift in Sources */,
+				363C37451F7F3ECA006ED4C9 /* CellPos.swift in Sources */,
+				363C37401F7F3D4D006ED4C9 /* Elem.swift in Sources */,
+				363C37601F7F4F99006ED4C9 /* ElemController.swift in Sources */,
 				3664F3A91F7F137F00C2DC36 /* GameViewController.swift in Sources */,
 				3664F3A71F7F137F00C2DC36 /* AppDelegate.swift in Sources */,
 			);
@@ -651,7 +759,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3664F3EC1F7F19A900C2DC36 /* lAzR4tTests.swift in Sources */,
+				3664F3EC1F7F19A900C2DC36 /* GridFrameTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -975,7 +1083,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 5HTYFH877E;
@@ -984,6 +1092,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jakob.lAzR4t;
 				PRODUCT_NAME = lAzR4t;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 4.0;
 			};
@@ -993,7 +1102,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 5HTYFH877E;
@@ -1002,6 +1111,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jakob.lAzR4t;
 				PRODUCT_NAME = lAzR4t;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 4.0;
 			};

@@ -15,15 +15,11 @@ import Foundation
 ///To give an idea, it *won't* handle animations, because if the game doesn't base any mechanics off of them.
 ///But it *will* handle projectile positions, because the game *does* use them to see if the projectiles collide.
 class GameModel {
-    var controller: GameController
+    private let controller: GameController
+    private let grid: GameGrid
     
-    init(controller: GameController) {
+    init(controller: GameController, grid: GameGrid) {
         self.controller = controller
-        
-        setup()
-    }
-    
-    private func setup() {
-        
+        self.grid = grid
     }
 }

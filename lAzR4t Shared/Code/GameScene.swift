@@ -11,7 +11,6 @@ import SpriteKit
 ///Renders the game.
 class GameScene: SKScene {
     fileprivate let controller: GameController
-    let grid: GameGridNode
     private var curControlModes: [String:ControlMode] { return controller.curControlModes }
     private var curTimeModes: [String:TimeMode] { return controller.curTimeModes }
     
@@ -19,12 +18,9 @@ class GameScene: SKScene {
         fatalError("Can't decode GameScene. Create it with init(controller: GameController)")
     }
     
-    init(controller: GameController, grid: GameGridNode) {
+    init(controller: GameController, size: CGSize) {
         self.controller = controller
-        self.grid = grid
-        super.init(size: grid.displaySize)
-        
-        addChild(grid)
+        super.init(size: size)
     }
     
     override func update(_ currentTime: TimeInterval) {

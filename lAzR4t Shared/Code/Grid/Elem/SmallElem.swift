@@ -9,13 +9,11 @@
 import Foundation
 
 ///An `Elem` which only takes up one cell
-protocol SmallElem {
-    var pos: CellPos { get }
-}
-
-extension SmallElem {
-    var frame: CellFrame { return CellFrame(pos: self.pos, size: CellSize.unit) }
-    
+class SmallElem: Elem {
     var x: Int { return pos.x }
     var y: Int { return pos.y }
+    
+    init(pos: CellPos) {
+        super.init(pos: pos, size: CellSize.unit)
+    }
 }

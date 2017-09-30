@@ -9,8 +9,7 @@
 import XCTest
 @testable import lAzR4t
 
-class GridFrameTests: XCTestCase {
-    
+class CellFrameTests: XCTestCase {
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -21,7 +20,7 @@ class GridFrameTests: XCTestCase {
         super.tearDown()
     }
     
-    func testFrameOverlap() {
+    func testOverlap() {
         XCTAssert(CellFrame.overlap(
             CellFrame(left: 1, bottom: 2, right: 3, top: 4),
             CellFrame(left: 0, bottom: 1, right: 2, top: 3)
@@ -66,5 +65,4 @@ class GridFrameTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
-    
 }

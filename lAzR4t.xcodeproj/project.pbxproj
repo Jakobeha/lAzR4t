@@ -54,10 +54,10 @@
 		363C37531F7F4251006ED4C9 /* SmallElem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C37511F7F4251006ED4C9 /* SmallElem.swift */; };
 		363C37541F7F4251006ED4C9 /* SmallElem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C37511F7F4251006ED4C9 /* SmallElem.swift */; };
 		363C37551F7F4251006ED4C9 /* SmallElem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C37511F7F4251006ED4C9 /* SmallElem.swift */; };
-		363C37571F7F4F69006ED4C9 /* GameGridController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C37561F7F4F69006ED4C9 /* GameGridController.swift */; };
-		363C37581F7F4F69006ED4C9 /* GameGridController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C37561F7F4F69006ED4C9 /* GameGridController.swift */; };
-		363C37591F7F4F69006ED4C9 /* GameGridController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C37561F7F4F69006ED4C9 /* GameGridController.swift */; };
-		363C375A1F7F4F69006ED4C9 /* GameGridController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C37561F7F4F69006ED4C9 /* GameGridController.swift */; };
+		363C37571F7F4F69006ED4C9 /* GridElemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C37561F7F4F69006ED4C9 /* GridElemController.swift */; };
+		363C37581F7F4F69006ED4C9 /* GridElemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C37561F7F4F69006ED4C9 /* GridElemController.swift */; };
+		363C37591F7F4F69006ED4C9 /* GridElemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C37561F7F4F69006ED4C9 /* GridElemController.swift */; };
+		363C375A1F7F4F69006ED4C9 /* GridElemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C37561F7F4F69006ED4C9 /* GridElemController.swift */; };
 		363C375D1F7F4F99006ED4C9 /* ElemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C375C1F7F4F99006ED4C9 /* ElemController.swift */; };
 		363C375E1F7F4F99006ED4C9 /* ElemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C375C1F7F4F99006ED4C9 /* ElemController.swift */; };
 		363C375F1F7F4F99006ED4C9 /* ElemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C375C1F7F4F99006ED4C9 /* ElemController.swift */; };
@@ -93,11 +93,28 @@
 		3664F3BB1F7F137F00C2DC36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3664F3661F7F137E00C2DC36 /* Assets.xcassets */; };
 		3664F3BC1F7F137F00C2DC36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3664F3661F7F137E00C2DC36 /* Assets.xcassets */; };
 		3664F3E41F7F188900C2DC36 /* ControlMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3664F3E31F7F188900C2DC36 /* ControlMode.swift */; };
-		3664F3EC1F7F19A900C2DC36 /* GridFrameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3664F3EB1F7F19A900C2DC36 /* GridFrameTests.swift */; };
-		3676FB161F7F547300D83351 /* GameGridNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3676FB151F7F547300D83351 /* GameGridNode.swift */; };
-		3676FB171F7F547300D83351 /* GameGridNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3676FB151F7F547300D83351 /* GameGridNode.swift */; };
-		3676FB181F7F547300D83351 /* GameGridNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3676FB151F7F547300D83351 /* GameGridNode.swift */; };
-		3676FB191F7F547300D83351 /* GameGridNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3676FB151F7F547300D83351 /* GameGridNode.swift */; };
+		3664F3EC1F7F19A900C2DC36 /* CellFrameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3664F3EB1F7F19A900C2DC36 /* CellFrameTests.swift */; };
+		3676FB161F7F547300D83351 /* GridElemNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3676FB151F7F547300D83351 /* GridElemNode.swift */; };
+		3676FB171F7F547300D83351 /* GridElemNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3676FB151F7F547300D83351 /* GridElemNode.swift */; };
+		3676FB181F7F547300D83351 /* GridElemNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3676FB151F7F547300D83351 /* GridElemNode.swift */; };
+		3676FB191F7F547300D83351 /* GridElemNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3676FB151F7F547300D83351 /* GridElemNode.swift */; };
+		3676FB1D1F7F5D3C00D83351 /* GridElem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3676FB1C1F7F5D3C00D83351 /* GridElem.swift */; };
+		3676FB1E1F7F5D3C00D83351 /* GridElem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3676FB1C1F7F5D3C00D83351 /* GridElem.swift */; };
+		3676FB1F1F7F5D3C00D83351 /* GridElem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3676FB1C1F7F5D3C00D83351 /* GridElem.swift */; };
+		3676FB201F7F5D3C00D83351 /* GridElem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3676FB1C1F7F5D3C00D83351 /* GridElem.swift */; };
+		3676FB221F7F64AF00D83351 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3676FB211F7F64AF00D83351 /* List.swift */; };
+		3676FB231F7F64AF00D83351 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3676FB211F7F64AF00D83351 /* List.swift */; };
+		3676FB241F7F64AF00D83351 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3676FB211F7F64AF00D83351 /* List.swift */; };
+		3676FB251F7F64AF00D83351 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3676FB211F7F64AF00D83351 /* List.swift */; };
+		3676FB271F7F6EBA00D83351 /* ListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3676FB261F7F6EBA00D83351 /* ListTests.swift */; };
+		3676FB291F7F765000D83351 /* ElemNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3676FB281F7F765000D83351 /* ElemNode.swift */; };
+		3676FB2A1F7F765000D83351 /* ElemNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3676FB281F7F765000D83351 /* ElemNode.swift */; };
+		3676FB2B1F7F765000D83351 /* ElemNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3676FB281F7F765000D83351 /* ElemNode.swift */; };
+		3676FB2C1F7F765000D83351 /* ElemNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3676FB281F7F765000D83351 /* ElemNode.swift */; };
+		3676FB2E1F7F794100D83351 /* GridController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3676FB2D1F7F794100D83351 /* GridController.swift */; };
+		3676FB2F1F7F794100D83351 /* GridController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3676FB2D1F7F794100D83351 /* GridController.swift */; };
+		3676FB301F7F794100D83351 /* GridController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3676FB2D1F7F794100D83351 /* GridController.swift */; };
+		3676FB311F7F794100D83351 /* GridController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3676FB2D1F7F794100D83351 /* GridController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -161,7 +178,7 @@
 		363C37461F7F3EE8006ED4C9 /* CellSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellSize.swift; sourceTree = "<group>"; };
 		363C374B1F7F3FA9006ED4C9 /* CellFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellFrame.swift; sourceTree = "<group>"; };
 		363C37511F7F4251006ED4C9 /* SmallElem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallElem.swift; sourceTree = "<group>"; };
-		363C37561F7F4F69006ED4C9 /* GameGridController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameGridController.swift; sourceTree = "<group>"; };
+		363C37561F7F4F69006ED4C9 /* GridElemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridElemController.swift; sourceTree = "<group>"; };
 		363C375C1F7F4F99006ED4C9 /* ElemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElemController.swift; sourceTree = "<group>"; };
 		363C37621F7F5022006ED4C9 /* CellDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellDisplay.swift; sourceTree = "<group>"; };
 		3664F3631F7F137E00C2DC36 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
@@ -193,9 +210,14 @@
 		3664F3E11F7F14F300C2DC36 /* Textures */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Textures; sourceTree = "<group>"; };
 		3664F3E31F7F188900C2DC36 /* ControlMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlMode.swift; sourceTree = "<group>"; };
 		3664F3E91F7F19A900C2DC36 /* lAzR4tTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lAzR4tTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3664F3EB1F7F19A900C2DC36 /* GridFrameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridFrameTests.swift; sourceTree = "<group>"; };
+		3664F3EB1F7F19A900C2DC36 /* CellFrameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellFrameTests.swift; sourceTree = "<group>"; };
 		3664F3ED1F7F19A900C2DC36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3676FB151F7F547300D83351 /* GameGridNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameGridNode.swift; sourceTree = "<group>"; };
+		3676FB151F7F547300D83351 /* GridElemNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridElemNode.swift; sourceTree = "<group>"; };
+		3676FB1C1F7F5D3C00D83351 /* GridElem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridElem.swift; sourceTree = "<group>"; };
+		3676FB211F7F64AF00D83351 /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
+		3676FB261F7F6EBA00D83351 /* ListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTests.swift; sourceTree = "<group>"; };
+		3676FB281F7F765000D83351 /* ElemNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElemNode.swift; sourceTree = "<group>"; };
+		3676FB2D1F7F794100D83351 /* GridController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,25 +262,15 @@
 		363C37121F7F2A6A006ED4C9 /* ControlMode */ = {
 			isa = PBXGroup;
 			children = (
+				3664F3E31F7F188900C2DC36 /* ControlMode.swift */,
 			);
 			path = ControlMode;
-			sourceTree = "<group>";
-		};
-		363C371E1F7F2E32006ED4C9 /* Mode */ = {
-			isa = PBXGroup;
-			children = (
-				363C37251F7F31AE006ED4C9 /* Mode */,
-				363C371F1F7F2E3D006ED4C9 /* TimeMode */,
-				363C37121F7F2A6A006ED4C9 /* ControlMode */,
-				3664F3E31F7F188900C2DC36 /* ControlMode.swift */,
-				363C37201F7F2E4A006ED4C9 /* TimeMode.swift */,
-			);
-			path = Mode;
 			sourceTree = "<group>";
 		};
 		363C371F1F7F2E3D006ED4C9 /* TimeMode */ = {
 			isa = PBXGroup;
 			children = (
+				363C37201F7F2E4A006ED4C9 /* TimeMode.swift */,
 			);
 			path = TimeMode;
 			sourceTree = "<group>";
@@ -266,6 +278,9 @@
 		363C37251F7F31AE006ED4C9 /* Mode */ = {
 			isa = PBXGroup;
 			children = (
+				363C371F1F7F2E3D006ED4C9 /* TimeMode */,
+				363C37121F7F2A6A006ED4C9 /* ControlMode */,
+				363C37191F7F2E0F006ED4C9 /* Mode.swift */,
 			);
 			path = Mode;
 			sourceTree = "<group>";
@@ -274,6 +289,7 @@
 			isa = PBXGroup;
 			children = (
 				363C37311F7F348F006ED4C9 /* Dictionary.swift */,
+				3676FB211F7F64AF00D83351 /* List.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -281,10 +297,10 @@
 		363C37501F7F423F006ED4C9 /* Elem */ = {
 			isa = PBXGroup;
 			children = (
-				363C37411F7F3ECA006ED4C9 /* CellPos.swift */,
-				363C37461F7F3EE8006ED4C9 /* CellSize.swift */,
-				363C374B1F7F3FA9006ED4C9 /* CellFrame.swift */,
-				363C37621F7F5022006ED4C9 /* CellDisplay.swift */,
+				3676FB1A1F7F5CBE00D83351 /* Cell */,
+				363C375C1F7F4F99006ED4C9 /* ElemController.swift */,
+				363C373C1F7F3D4D006ED4C9 /* Elem.swift */,
+				3676FB281F7F765000D83351 /* ElemNode.swift */,
 				363C37511F7F4251006ED4C9 /* SmallElem.swift */,
 			);
 			path = Elem;
@@ -294,8 +310,8 @@
 			isa = PBXGroup;
 			children = (
 				363C37501F7F423F006ED4C9 /* Elem */,
-				363C373C1F7F3D4D006ED4C9 /* Elem.swift */,
-				363C375C1F7F4F99006ED4C9 /* ElemController.swift */,
+				3676FB2D1F7F794100D83351 /* GridController.swift */,
+				363C37361F7F3BE9006ED4C9 /* Grid.swift */,
 			);
 			path = Grid;
 			sourceTree = "<group>";
@@ -394,7 +410,8 @@
 		3664F3EA1F7F19A900C2DC36 /* lAzR4tTests */ = {
 			isa = PBXGroup;
 			children = (
-				3664F3EB1F7F19A900C2DC36 /* GridFrameTests.swift */,
+				3664F3EB1F7F19A900C2DC36 /* CellFrameTests.swift */,
+				3676FB261F7F6EBA00D83351 /* ListTests.swift */,
 				3664F3ED1F7F19A900C2DC36 /* Info.plist */,
 			);
 			path = lAzR4tTests;
@@ -404,7 +421,9 @@
 			isa = PBXGroup;
 			children = (
 				363C37301F7F3486006ED4C9 /* Core */,
-				3676FB141F7F53CC00D83351 /* Game */,
+				363C375B1F7F4F89006ED4C9 /* Grid */,
+				3676FB1B1F7F5D2800D83351 /* GridElem */,
+				363C37251F7F31AE006ED4C9 /* Mode */,
 				363C37041F7F1B98006ED4C9 /* GameController.swift */,
 				363C37061F7F1BD7006ED4C9 /* GameModel.swift */,
 				3664F3651F7F137E00C2DC36 /* GameScene.swift */,
@@ -412,17 +431,25 @@
 			path = Code;
 			sourceTree = "<group>";
 		};
-		3676FB141F7F53CC00D83351 /* Game */ = {
+		3676FB1A1F7F5CBE00D83351 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				363C375B1F7F4F89006ED4C9 /* Grid */,
-				363C371E1F7F2E32006ED4C9 /* Mode */,
-				363C37191F7F2E0F006ED4C9 /* Mode.swift */,
-				363C37561F7F4F69006ED4C9 /* GameGridController.swift */,
-				363C37361F7F3BE9006ED4C9 /* Grid.swift */,
-				3676FB151F7F547300D83351 /* GameGridNode.swift */,
+				363C37411F7F3ECA006ED4C9 /* CellPos.swift */,
+				363C37461F7F3EE8006ED4C9 /* CellSize.swift */,
+				363C374B1F7F3FA9006ED4C9 /* CellFrame.swift */,
+				363C37621F7F5022006ED4C9 /* CellDisplay.swift */,
 			);
-			path = Game;
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		3676FB1B1F7F5D2800D83351 /* GridElem */ = {
+			isa = PBXGroup;
+			children = (
+				363C37561F7F4F69006ED4C9 /* GridElemController.swift */,
+				3676FB151F7F547300D83351 /* GridElemNode.swift */,
+				3676FB1C1F7F5D3C00D83351 /* GridElem.swift */,
+			);
+			path = GridElem;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -661,18 +688,22 @@
 				363C37471F7F3EE8006ED4C9 /* CellSize.swift in Sources */,
 				363C371A1F7F2E0F006ED4C9 /* Mode.swift in Sources */,
 				3664F3711F7F137E00C2DC36 /* GameViewController.swift in Sources */,
+				3676FB221F7F64AF00D83351 /* List.swift in Sources */,
 				3664F3E41F7F188900C2DC36 /* ControlMode.swift in Sources */,
 				363C37321F7F348F006ED4C9 /* Dictionary.swift in Sources */,
-				3676FB161F7F547300D83351 /* GameGridNode.swift in Sources */,
+				3676FB161F7F547300D83351 /* GridElemNode.swift in Sources */,
 				363C374C1F7F3FA9006ED4C9 /* CellFrame.swift in Sources */,
+				3676FB1D1F7F5D3C00D83351 /* GridElem.swift in Sources */,
 				363C37211F7F2E4A006ED4C9 /* TimeMode.swift in Sources */,
-				363C37571F7F4F69006ED4C9 /* GameGridController.swift in Sources */,
+				363C37571F7F4F69006ED4C9 /* GridElemController.swift in Sources */,
 				363C37371F7F3BE9006ED4C9 /* Grid.swift in Sources */,
 				363C37521F7F4251006ED4C9 /* SmallElem.swift in Sources */,
 				363C37421F7F3ECA006ED4C9 /* CellPos.swift in Sources */,
 				363C373D1F7F3D4D006ED4C9 /* Elem.swift in Sources */,
 				363C375D1F7F4F99006ED4C9 /* ElemController.swift in Sources */,
 				3664F36F1F7F137E00C2DC36 /* AppDelegate.swift in Sources */,
+				3676FB2E1F7F794100D83351 /* GridController.swift in Sources */,
+				3676FB291F7F765000D83351 /* ElemNode.swift in Sources */,
 				363C37071F7F1BD7006ED4C9 /* GameModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -687,18 +718,22 @@
 				363C37481F7F3EE8006ED4C9 /* CellSize.swift in Sources */,
 				363C371B1F7F2E0F006ED4C9 /* Mode.swift in Sources */,
 				363C370D1F7F207F006ED4C9 /* GameModel.swift in Sources */,
+				3676FB231F7F64AF00D83351 /* List.swift in Sources */,
 				3664F3B61F7F137F00C2DC36 /* GameScene.swift in Sources */,
 				363C37331F7F348F006ED4C9 /* Dictionary.swift in Sources */,
-				3676FB171F7F547300D83351 /* GameGridNode.swift in Sources */,
+				3676FB171F7F547300D83351 /* GridElemNode.swift in Sources */,
 				363C374D1F7F3FA9006ED4C9 /* CellFrame.swift in Sources */,
+				3676FB1E1F7F5D3C00D83351 /* GridElem.swift in Sources */,
 				363C37221F7F2E4A006ED4C9 /* TimeMode.swift in Sources */,
-				363C37581F7F4F69006ED4C9 /* GameGridController.swift in Sources */,
+				363C37581F7F4F69006ED4C9 /* GridElemController.swift in Sources */,
 				363C37381F7F3BE9006ED4C9 /* Grid.swift in Sources */,
 				363C37531F7F4251006ED4C9 /* SmallElem.swift in Sources */,
 				363C37431F7F3ECA006ED4C9 /* CellPos.swift in Sources */,
 				363C373E1F7F3D4D006ED4C9 /* Elem.swift in Sources */,
 				363C375E1F7F4F99006ED4C9 /* ElemController.swift in Sources */,
 				3664F3901F7F137E00C2DC36 /* ExtensionDelegate.swift in Sources */,
+				3676FB2F1F7F794100D83351 /* GridController.swift in Sources */,
+				3676FB2A1F7F765000D83351 /* ElemNode.swift in Sources */,
 				3664F38E1F7F137E00C2DC36 /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -713,18 +748,22 @@
 				363C37491F7F3EE8006ED4C9 /* CellSize.swift in Sources */,
 				363C371C1F7F2E0F006ED4C9 /* Mode.swift in Sources */,
 				363C370B1F7F2079006ED4C9 /* GameModel.swift in Sources */,
+				3676FB241F7F64AF00D83351 /* List.swift in Sources */,
 				3664F3B71F7F137F00C2DC36 /* GameScene.swift in Sources */,
 				363C37341F7F348F006ED4C9 /* Dictionary.swift in Sources */,
-				3676FB181F7F547300D83351 /* GameGridNode.swift in Sources */,
+				3676FB181F7F547300D83351 /* GridElemNode.swift in Sources */,
 				363C374E1F7F3FA9006ED4C9 /* CellFrame.swift in Sources */,
+				3676FB1F1F7F5D3C00D83351 /* GridElem.swift in Sources */,
 				363C37231F7F2E4A006ED4C9 /* TimeMode.swift in Sources */,
-				363C37591F7F4F69006ED4C9 /* GameGridController.swift in Sources */,
+				363C37591F7F4F69006ED4C9 /* GridElemController.swift in Sources */,
 				363C37391F7F3BE9006ED4C9 /* Grid.swift in Sources */,
 				363C37541F7F4251006ED4C9 /* SmallElem.swift in Sources */,
 				363C37441F7F3ECA006ED4C9 /* CellPos.swift in Sources */,
 				363C373F1F7F3D4D006ED4C9 /* Elem.swift in Sources */,
 				363C375F1F7F4F99006ED4C9 /* ElemController.swift in Sources */,
 				3664F39B1F7F137E00C2DC36 /* GameViewController.swift in Sources */,
+				3676FB301F7F794100D83351 /* GridController.swift in Sources */,
+				3676FB2B1F7F765000D83351 /* ElemNode.swift in Sources */,
 				3664F3991F7F137E00C2DC36 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -739,18 +778,22 @@
 				363C374A1F7F3EE8006ED4C9 /* CellSize.swift in Sources */,
 				363C371D1F7F2E0F006ED4C9 /* Mode.swift in Sources */,
 				363C37091F7F2069006ED4C9 /* GameModel.swift in Sources */,
+				3676FB251F7F64AF00D83351 /* List.swift in Sources */,
 				3664F3B81F7F137F00C2DC36 /* GameScene.swift in Sources */,
 				363C37351F7F348F006ED4C9 /* Dictionary.swift in Sources */,
-				3676FB191F7F547300D83351 /* GameGridNode.swift in Sources */,
+				3676FB191F7F547300D83351 /* GridElemNode.swift in Sources */,
 				363C374F1F7F3FA9006ED4C9 /* CellFrame.swift in Sources */,
+				3676FB201F7F5D3C00D83351 /* GridElem.swift in Sources */,
 				363C37241F7F2E4A006ED4C9 /* TimeMode.swift in Sources */,
-				363C375A1F7F4F69006ED4C9 /* GameGridController.swift in Sources */,
+				363C375A1F7F4F69006ED4C9 /* GridElemController.swift in Sources */,
 				363C373A1F7F3BE9006ED4C9 /* Grid.swift in Sources */,
 				363C37551F7F4251006ED4C9 /* SmallElem.swift in Sources */,
 				363C37451F7F3ECA006ED4C9 /* CellPos.swift in Sources */,
 				363C37401F7F3D4D006ED4C9 /* Elem.swift in Sources */,
 				363C37601F7F4F99006ED4C9 /* ElemController.swift in Sources */,
 				3664F3A91F7F137F00C2DC36 /* GameViewController.swift in Sources */,
+				3676FB311F7F794100D83351 /* GridController.swift in Sources */,
+				3676FB2C1F7F765000D83351 /* ElemNode.swift in Sources */,
 				3664F3A71F7F137F00C2DC36 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -759,7 +802,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3664F3EC1F7F19A900C2DC36 /* GridFrameTests.swift in Sources */,
+				3664F3EC1F7F19A900C2DC36 /* CellFrameTests.swift in Sources */,
+				3676FB271F7F6EBA00D83351 /* ListTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

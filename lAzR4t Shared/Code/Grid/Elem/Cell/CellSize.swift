@@ -25,11 +25,4 @@ struct CellSize {
     static func *(_ a: CellSize, _ scale: Int) -> CellSize {
         return CellSize(width: a.width * scale, height: a.height * scale)
     }
-    
-    static func *(_ a: CellSize, _ scale: CGFloat) -> CGSize {
-        return CGSize(
-            width: CGFloat(a.width) * scale,
-            height: CGFloat(a.height) * scale
-        )
-    }
 }

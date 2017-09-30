@@ -22,4 +22,8 @@ class GameModel {
         self.controller = controller
         self.grid = grid
     }
+    
+    func set(grid newGrid: GameGrid) -> GameModel {
+        return GameModel(controller: self.controller, grid: newGrid)
+    }
 }

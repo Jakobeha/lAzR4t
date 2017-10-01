@@ -36,7 +36,7 @@ class Elem: Equatable {
         return Elem(pos: newPos, size: self.size)
     }
     
-    final func offset(by offset: CellSize) -> Elem {
+    func offset(by offset: CellSize) -> Elem {
         return self.set(pos: self.pos + offset)
     }
     

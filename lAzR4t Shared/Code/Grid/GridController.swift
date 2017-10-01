@@ -15,6 +15,9 @@ class GridController<TElem: Elem>: Equatable {
     var curElems: List<ElemController<TElem>> { return _curElems }
     ///The node where elements in the grid will be added to.
     let node: ElemNode
+    var _elemOwner: GridElemController<TElem>? = nil
+    ///The element which owns this grid
+    var elemOwner: GridElemController<TElem>? { return _elemOwner }
     
     static func ==(_ a: GridController<TElem>, _ b: GridController<TElem>) -> Bool {
         return a === b

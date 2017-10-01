@@ -8,7 +8,7 @@
 
 import Foundation
 
-class HeartElemController: SimpleElemController<HeartElem> {
+class HeartElemController: PlayElemController_impl<HeartElem> {
     override var curModel: HeartElem {
         didSet {
             node_spe.reconfigure(

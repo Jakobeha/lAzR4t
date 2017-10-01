@@ -9,7 +9,7 @@
 import Foundation
 
 ///Each player has one of these. When destroyed, they lose the game.
-class HeartElem: LiveElem {
+final class HeartElem: LiveElem_base, LiveElem {
     static let initHealth: Int = 2500
     
     let direction: PlayerDirection
@@ -29,6 +29,14 @@ class HeartElem: LiveElem {
     init(health: Int, direction: PlayerDirection, pos: CellPos, size: CellSize) {
         self.direction = direction
         super.init(health: health, pos: pos, size: size)
+    }
+    
+    func set(health newHealth: Int) -> HeartElem {
+        return HeartElem(health: newHealth, direction: self.direction, pos: self.pos, size: self.size)
+    }
+    
+    override func set(pos newPos: CellPos) -> HeartElem {
+        return HeartElem(health: self.health, direction: self.direction, pos: newPos, size: self.size)
     }
     
     override func equals(_ other: Elem) -> Bool {

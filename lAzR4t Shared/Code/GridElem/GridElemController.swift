@@ -45,6 +45,8 @@ final class GridElemController<TSub: Elem>: ElemController<GridElem<TSub>> {
         self.gridNode = display ? GridElemNode(cellSize: grid.curModel.size) : nil
         super.init(node: grid.node)
         
+        assert(grid.elemOwner == nil, "Grid can't be owned by two elements")
+        grid._elemOwner = self
         if let gridNode = gridNode {
             grid.node.addChild(gridNode)
         }

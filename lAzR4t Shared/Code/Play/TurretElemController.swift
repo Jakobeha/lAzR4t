@@ -8,10 +8,11 @@
 
 import Foundation
 
-class TurretElemController: SimpleElemController<TurretElem> {
+class TurretElemController: PlayElemController_impl<TurretElem> {
     override var curModel: TurretElem {
         didSet {
             node_spe.reconfigure(
+                healthRatio: curModel.healthRatio,
                 color: curModel.color,
                 direction: curModel.direction,
                 isPlaceholder: curModel.isPlaceholder,
@@ -39,6 +40,7 @@ class TurretElemController: SimpleElemController<TurretElem> {
     
     init(curModel: TurretElem) {
         node_spe = TurretElemNode(
+            healthRatio: curModel.healthRatio,
             color: curModel.color,
             direction: curModel.direction,
             isPlaceholder: curModel.isPlaceholder,

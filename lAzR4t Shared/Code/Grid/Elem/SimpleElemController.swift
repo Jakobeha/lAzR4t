@@ -18,11 +18,12 @@ class SimpleElemController<TElem: Elem>: ElemController<TElem> {
     override var curModel: TElem {
         get { return _curModel }
         set(newCurModel) {
-            parents.forEach { try! $0._curModel = $0._curModel.replaceOne(oldElem: curModel, newElem: newCurModel) }
+            if let parent = self.parent {
+                try! parent._curModel = parent._curModel.replaceOne(oldElem: curModel, newElem: newCurModel)
+            }
             _curModel = newCurModel
         }
     }
-    private var parents: List<GridController<TElem>> = List.empty
     
     ///Creates an element controller with a sprite node with a specific texture.
     convenience init(curModel: TElem, textureName: String) {
@@ -32,15 +33,5 @@ class SimpleElemController<TElem: Elem>: ElemController<TElem> {
     init(curModel: TElem, node: ElemNode?) {
         self._curModel = curModel //Don't worry about setter, doesn't have parents yet
         super.init(node: node)
-    }
-    
-    internal override func _add(parent: GridController<TElem>) {
-        super._add(parent: parent)
-        parents = parent + parents
-    }
-    
-    internal override func _remove(parent: GridController<TElem>) {
-        super._remove(parent: parent)
-        parents = try! parents.removeOne(parent)
     }
 }

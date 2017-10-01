@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3617C2011F80E26B0096BD8F /* ActionMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3617C2001F80E26B0096BD8F /* ActionMode.swift */; };
+		3617C2021F80E26B0096BD8F /* ActionMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3617C2001F80E26B0096BD8F /* ActionMode.swift */; };
+		3617C2031F80E26B0096BD8F /* ActionMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3617C2001F80E26B0096BD8F /* ActionMode.swift */; };
+		3617C2041F80E26B0096BD8F /* ActionMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3617C2001F80E26B0096BD8F /* ActionMode.swift */; };
 		361FF8DA1F80B33200B9465C /* AddTurretMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FF8D41F80B2C600B9465C /* AddTurretMode.swift */; };
 		361FF8DB1F80B33200B9465C /* ColorTurretMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FF8D51F80B2C600B9465C /* ColorTurretMode.swift */; };
 		361FF8DC1F80B33200B9465C /* PlaceTurretMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FF8D61F80B2C600B9465C /* PlaceTurretMode.swift */; };
@@ -239,6 +243,18 @@
 		3676FB2F1F7F794100D83351 /* GridController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3676FB2D1F7F794100D83351 /* GridController.swift */; };
 		3676FB301F7F794100D83351 /* GridController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3676FB2D1F7F794100D83351 /* GridController.swift */; };
 		3676FB311F7F794100D83351 /* GridController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3676FB2D1F7F794100D83351 /* GridController.swift */; };
+		3678088A1F80F38000816249 /* PlayElemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367808891F80F38000816249 /* PlayElemController.swift */; };
+		3678088B1F80F38000816249 /* PlayElemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367808891F80F38000816249 /* PlayElemController.swift */; };
+		3678088C1F80F38000816249 /* PlayElemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367808891F80F38000816249 /* PlayElemController.swift */; };
+		3678088D1F80F38000816249 /* PlayElemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367808891F80F38000816249 /* PlayElemController.swift */; };
+		369228891F80E0FC00F5862A /* FireMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369228881F80E0FC00F5862A /* FireMode.swift */; };
+		3692288A1F80E0FC00F5862A /* FireMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369228881F80E0FC00F5862A /* FireMode.swift */; };
+		3692288B1F80E0FC00F5862A /* FireMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369228881F80E0FC00F5862A /* FireMode.swift */; };
+		3692288C1F80E0FC00F5862A /* FireMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369228881F80E0FC00F5862A /* FireMode.swift */; };
+		36B2563E1F811BD500BCCC97 /* ForeignCastElemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B2563D1F811BD500BCCC97 /* ForeignCastElemController.swift */; };
+		36B2563F1F811BD500BCCC97 /* ForeignCastElemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B2563D1F811BD500BCCC97 /* ForeignCastElemController.swift */; };
+		36B256401F811BD500BCCC97 /* ForeignCastElemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B2563D1F811BD500BCCC97 /* ForeignCastElemController.swift */; };
+		36B256411F811BD500BCCC97 /* ForeignCastElemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B2563D1F811BD500BCCC97 /* ForeignCastElemController.swift */; };
 		36C065FC1F80CE2800D36D04 /* CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C065FB1F80CE2800D36D04 /* CGPoint.swift */; };
 		36C065FD1F80CE2800D36D04 /* CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C065FB1F80CE2800D36D04 /* CGPoint.swift */; };
 		36C065FE1F80CE2800D36D04 /* CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C065FB1F80CE2800D36D04 /* CGPoint.swift */; };
@@ -267,6 +283,10 @@
 		36C066151F80D06900D36D04 /* GreenButtonSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 36C065FA1F80CCFB00D36D04 /* GreenButtonSelected.png */; };
 		36C066161F80D06900D36D04 /* RedButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 36C065F91F80CCFB00D36D04 /* RedButton.png */; };
 		36C066171F80D06900D36D04 /* RedButtonSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 36C065F81F80CCFB00D36D04 /* RedButtonSelected.png */; };
+		36C3B7331F8113EA00DEA5ED /* ForeignPlayElemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C3B7321F8113EA00DEA5ED /* ForeignPlayElemController.swift */; };
+		36C3B7341F8113EA00DEA5ED /* ForeignPlayElemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C3B7321F8113EA00DEA5ED /* ForeignPlayElemController.swift */; };
+		36C3B7351F8113EA00DEA5ED /* ForeignPlayElemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C3B7321F8113EA00DEA5ED /* ForeignPlayElemController.swift */; };
+		36C3B7361F8113EA00DEA5ED /* ForeignPlayElemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C3B7321F8113EA00DEA5ED /* ForeignPlayElemController.swift */; };
 		36CB4FF11F7FFAED0083934F /* TurretElemNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CB4FF01F7FFAED0083934F /* TurretElemNode.swift */; };
 		36CB4FF21F7FFAED0083934F /* TurretElemNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CB4FF01F7FFAED0083934F /* TurretElemNode.swift */; };
 		36CB4FF31F7FFAED0083934F /* TurretElemNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CB4FF01F7FFAED0083934F /* TurretElemNode.swift */; };
@@ -355,6 +375,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3617C2001F80E26B0096BD8F /* ActionMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionMode.swift; sourceTree = "<group>"; };
 		361FF8D41F80B2C600B9465C /* AddTurretMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTurretMode.swift; sourceTree = "<group>"; };
 		361FF8D51F80B2C600B9465C /* ColorTurretMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTurretMode.swift; sourceTree = "<group>"; };
 		361FF8D61F80B2C600B9465C /* PlaceTurretMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceTurretMode.swift; sourceTree = "<group>"; };
@@ -424,6 +445,9 @@
 		3676FB261F7F6EBA00D83351 /* ListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTests.swift; sourceTree = "<group>"; };
 		3676FB281F7F765000D83351 /* ElemNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElemNode.swift; sourceTree = "<group>"; };
 		3676FB2D1F7F794100D83351 /* GridController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridController.swift; sourceTree = "<group>"; };
+		367808891F80F38000816249 /* PlayElemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayElemController.swift; sourceTree = "<group>"; };
+		369228881F80E0FC00F5862A /* FireMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireMode.swift; sourceTree = "<group>"; };
+		36B2563D1F811BD500BCCC97 /* ForeignCastElemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForeignCastElemController.swift; sourceTree = "<group>"; };
 		36C065F51F80CCFB00D36D04 /* BlueButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BlueButton.png; path = "../../../../lAzR4t old/lAzR4t Shared/Textures/Button/BlueButton.png"; sourceTree = "<group>"; };
 		36C065F61F80CCFB00D36D04 /* BlueButtonSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BlueButtonSelected.png; path = "../../../../lAzR4t old/lAzR4t Shared/Textures/Button/BlueButtonSelected.png"; sourceTree = "<group>"; };
 		36C065F71F80CCFB00D36D04 /* GreenButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GreenButton.png; path = "../../../../lAzR4t old/lAzR4t Shared/Textures/Button/GreenButton.png"; sourceTree = "<group>"; };
@@ -431,6 +455,7 @@
 		36C065F91F80CCFB00D36D04 /* RedButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RedButton.png; path = "../../../../lAzR4t old/lAzR4t Shared/Textures/Button/RedButton.png"; sourceTree = "<group>"; };
 		36C065FA1F80CCFB00D36D04 /* GreenButtonSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GreenButtonSelected.png; path = "../../../../lAzR4t old/lAzR4t Shared/Textures/Button/GreenButtonSelected.png"; sourceTree = "<group>"; };
 		36C065FB1F80CE2800D36D04 /* CGPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGPoint.swift; sourceTree = "<group>"; };
+		36C3B7321F8113EA00DEA5ED /* ForeignPlayElemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForeignPlayElemController.swift; sourceTree = "<group>"; };
 		36CB4FF01F7FFAED0083934F /* TurretElemNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurretElemNode.swift; sourceTree = "<group>"; };
 		36CB4FF61F7FFE590083934F /* ProjectileElemNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectileElemNode.swift; sourceTree = "<group>"; };
 		36CB4FFC1F7FFE650083934F /* ProjectileElemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectileElemController.swift; sourceTree = "<group>"; };
@@ -497,7 +522,9 @@
 			isa = PBXGroup;
 			children = (
 				361FF8D31F80B2C600B9465C /* AddTurretTurnMode */,
+				369228881F80E0FC00F5862A /* FireMode.swift */,
 				361FF8D81F80B2C600B9465C /* LazyMode.swift */,
+				3617C2001F80E26B0096BD8F /* ActionMode.swift */,
 				361FF8D91F80B2C600B9465C /* Mode.swift */,
 			);
 			name = Mode;
@@ -531,6 +558,8 @@
 		36232A691F7F9237001656ED /* Play */ = {
 			isa = PBXGroup;
 			children = (
+				36C3B7321F8113EA00DEA5ED /* ForeignPlayElemController.swift */,
+				367808891F80F38000816249 /* PlayElemController.swift */,
 				36232A6A1F7F925E001656ED /* PlayElem.swift */,
 				36232A641F7F922F001656ED /* LiveElem.swift */,
 				36F2B75D1F80BC5B00090749 /* PlayerDirection.swift */,
@@ -568,6 +597,7 @@
 			children = (
 				3676FB1A1F7F5CBE00D83351 /* Cell */,
 				362AE1441F80361400C5280B /* SimpleElemController.swift */,
+				36B2563D1F811BD500BCCC97 /* ForeignCastElemController.swift */,
 				363C375C1F7F4F99006ED4C9 /* ElemController.swift */,
 				3630CBF81F8042D700607678 /* ElemToController.swift */,
 				363C373C1F7F3D4D006ED4C9 /* Elem.swift */,
@@ -1088,10 +1118,12 @@
 				361FF90D1F80B4E100B9465C /* ColorDropDown.swift in Sources */,
 				361FF8F91F80B44D00B9465C /* ColorButtonController.swift in Sources */,
 				361FF8FA1F80B44D00B9465C /* ColorButtonElem.swift in Sources */,
+				36B2563E1F811BD500BCCC97 /* ForeignCastElemController.swift in Sources */,
 				361FF92D1F80B59000B9465C /* CellPos.swift in Sources */,
 				361FF8FB1F80B44D00B9465C /* ColorButtonNode.swift in Sources */,
 				361FF8EC1F80B34500B9465C /* AddTurretMode.swift in Sources */,
 				36F6F71E1F80C18F00C446C3 /* Optional.swift in Sources */,
+				3617C2011F80E26B0096BD8F /* ActionMode.swift in Sources */,
 				361FF8ED1F80B34500B9465C /* ColorTurretMode.swift in Sources */,
 				361FF8EE1F80B34500B9465C /* PlaceTurretMode.swift in Sources */,
 				361FF8EF1F80B34500B9465C /* RotateTurretMode.swift in Sources */,
@@ -1100,6 +1132,7 @@
 				36CDFE6B1F800F8000B0807B /* HeartElemNode.swift in Sources */,
 				36235F941F7FF76300E98B29 /* TurretElemController.swift in Sources */,
 				3664F3B51F7F137F00C2DC36 /* GameScene.swift in Sources */,
+				36C3B7331F8113EA00DEA5ED /* ForeignPlayElemController.swift in Sources */,
 				3630CBF91F8042D700607678 /* ElemToController.swift in Sources */,
 				361FF9291F80B59000B9465C /* CellFrame.swift in Sources */,
 				36CB4FF71F7FFE590083934F /* ProjectileElemNode.swift in Sources */,
@@ -1133,6 +1166,8 @@
 				3664F36F1F7F137E00C2DC36 /* AppDelegate.swift in Sources */,
 				361FF9211F80B59000B9465C /* CellDisplay.swift in Sources */,
 				36232A801F7F9AAC001656ED /* HeartElem.swift in Sources */,
+				369228891F80E0FC00F5862A /* FireMode.swift in Sources */,
+				3678088A1F80F38000816249 /* PlayElemController.swift in Sources */,
 				3676FB2E1F7F794100D83351 /* GridController.swift in Sources */,
 				3676FB291F7F765000D83351 /* ElemNode.swift in Sources */,
 				363C37071F7F1BD7006ED4C9 /* GameModel.swift in Sources */,
@@ -1147,10 +1182,12 @@
 				361FF90E1F80B4E100B9465C /* ColorDropDown.swift in Sources */,
 				361FF8FE1F80B45700B9465C /* ColorButtonController.swift in Sources */,
 				361FF8FF1F80B45700B9465C /* ColorButtonElem.swift in Sources */,
+				36B2563F1F811BD500BCCC97 /* ForeignCastElemController.swift in Sources */,
 				361FF92B1F80B59000B9465C /* CellPos.swift in Sources */,
 				361FF9001F80B45700B9465C /* ColorButtonNode.swift in Sources */,
 				361FF8E61F80B33E00B9465C /* AddTurretMode.swift in Sources */,
 				36F6F71F1F80C18F00C446C3 /* Optional.swift in Sources */,
+				3617C2021F80E26B0096BD8F /* ActionMode.swift in Sources */,
 				361FF8E71F80B33E00B9465C /* ColorTurretMode.swift in Sources */,
 				361FF8E81F80B33E00B9465C /* PlaceTurretMode.swift in Sources */,
 				361FF8E91F80B33E00B9465C /* RotateTurretMode.swift in Sources */,
@@ -1159,6 +1196,7 @@
 				36CDFE6C1F800F8000B0807B /* HeartElemNode.swift in Sources */,
 				36232A601F7F91EA001656ED /* PlayerController.swift in Sources */,
 				36232A611F7F91EA001656ED /* PlayerModel.swift in Sources */,
+				36C3B7341F8113EA00DEA5ED /* ForeignPlayElemController.swift in Sources */,
 				36235F951F7FF76300E98B29 /* TurretElemController.swift in Sources */,
 				3630CBFA1F8042D700607678 /* ElemToController.swift in Sources */,
 				361FF9271F80B59000B9465C /* CellFrame.swift in Sources */,
@@ -1192,6 +1230,8 @@
 				3664F3901F7F137E00C2DC36 /* ExtensionDelegate.swift in Sources */,
 				361FF91F1F80B59000B9465C /* CellDisplay.swift in Sources */,
 				36232A811F7F9AAC001656ED /* HeartElem.swift in Sources */,
+				3692288A1F80E0FC00F5862A /* FireMode.swift in Sources */,
+				3678088B1F80F38000816249 /* PlayElemController.swift in Sources */,
 				3676FB2F1F7F794100D83351 /* GridController.swift in Sources */,
 				3676FB2A1F7F765000D83351 /* ElemNode.swift in Sources */,
 				3664F38E1F7F137E00C2DC36 /* InterfaceController.swift in Sources */,
@@ -1206,10 +1246,12 @@
 				361FF90F1F80B4E100B9465C /* ColorDropDown.swift in Sources */,
 				361FF9031F80B45E00B9465C /* ColorButtonController.swift in Sources */,
 				361FF9041F80B45E00B9465C /* ColorButtonElem.swift in Sources */,
+				36B256401F811BD500BCCC97 /* ForeignCastElemController.swift in Sources */,
 				361FF92C1F80B59000B9465C /* CellPos.swift in Sources */,
 				361FF9051F80B45E00B9465C /* ColorButtonNode.swift in Sources */,
 				361FF8E01F80B33800B9465C /* AddTurretMode.swift in Sources */,
 				36F6F7201F80C18F00C446C3 /* Optional.swift in Sources */,
+				3617C2031F80E26B0096BD8F /* ActionMode.swift in Sources */,
 				361FF8E11F80B33800B9465C /* ColorTurretMode.swift in Sources */,
 				361FF8E21F80B33800B9465C /* PlaceTurretMode.swift in Sources */,
 				361FF8E31F80B33800B9465C /* RotateTurretMode.swift in Sources */,
@@ -1218,6 +1260,7 @@
 				36CDFE6D1F800F8000B0807B /* HeartElemNode.swift in Sources */,
 				36232A5E1F7F91E0001656ED /* PlayerController.swift in Sources */,
 				36232A5F1F7F91E0001656ED /* PlayerModel.swift in Sources */,
+				36C3B7351F8113EA00DEA5ED /* ForeignPlayElemController.swift in Sources */,
 				36235F961F7FF76300E98B29 /* TurretElemController.swift in Sources */,
 				3630CBFB1F8042D700607678 /* ElemToController.swift in Sources */,
 				361FF9281F80B59000B9465C /* CellFrame.swift in Sources */,
@@ -1251,6 +1294,8 @@
 				3664F39B1F7F137E00C2DC36 /* GameViewController.swift in Sources */,
 				361FF9201F80B59000B9465C /* CellDisplay.swift in Sources */,
 				36232A821F7F9AAC001656ED /* HeartElem.swift in Sources */,
+				3692288B1F80E0FC00F5862A /* FireMode.swift in Sources */,
+				3678088C1F80F38000816249 /* PlayElemController.swift in Sources */,
 				3676FB301F7F794100D83351 /* GridController.swift in Sources */,
 				3676FB2B1F7F765000D83351 /* ElemNode.swift in Sources */,
 				3664F3991F7F137E00C2DC36 /* AppDelegate.swift in Sources */,
@@ -1265,10 +1310,12 @@
 				361FF9101F80B4E100B9465C /* ColorDropDown.swift in Sources */,
 				361FF9081F80B46500B9465C /* ColorButtonController.swift in Sources */,
 				361FF9091F80B46500B9465C /* ColorButtonElem.swift in Sources */,
+				36B256411F811BD500BCCC97 /* ForeignCastElemController.swift in Sources */,
 				361FF92E1F80B59000B9465C /* CellPos.swift in Sources */,
 				361FF90A1F80B46500B9465C /* ColorButtonNode.swift in Sources */,
 				361FF8DA1F80B33200B9465C /* AddTurretMode.swift in Sources */,
 				36F6F7211F80C18F00C446C3 /* Optional.swift in Sources */,
+				3617C2041F80E26B0096BD8F /* ActionMode.swift in Sources */,
 				361FF8DB1F80B33200B9465C /* ColorTurretMode.swift in Sources */,
 				361FF8DC1F80B33200B9465C /* PlaceTurretMode.swift in Sources */,
 				361FF8DD1F80B33200B9465C /* RotateTurretMode.swift in Sources */,
@@ -1277,6 +1324,7 @@
 				36CDFE6E1F800F8000B0807B /* HeartElemNode.swift in Sources */,
 				36232A5C1F7F91D5001656ED /* PlayerController.swift in Sources */,
 				36232A5D1F7F91D5001656ED /* PlayerModel.swift in Sources */,
+				36C3B7361F8113EA00DEA5ED /* ForeignPlayElemController.swift in Sources */,
 				36235F971F7FF76300E98B29 /* TurretElemController.swift in Sources */,
 				3630CBFC1F8042D700607678 /* ElemToController.swift in Sources */,
 				361FF92A1F80B59000B9465C /* CellFrame.swift in Sources */,
@@ -1310,6 +1358,8 @@
 				3664F3A91F7F137F00C2DC36 /* GameViewController.swift in Sources */,
 				361FF9221F80B59000B9465C /* CellDisplay.swift in Sources */,
 				36232A831F7F9AAC001656ED /* HeartElem.swift in Sources */,
+				3692288C1F80E0FC00F5862A /* FireMode.swift in Sources */,
+				3678088D1F80F38000816249 /* PlayElemController.swift in Sources */,
 				3676FB311F7F794100D83351 /* GridController.swift in Sources */,
 				3676FB2C1F7F765000D83351 /* ElemNode.swift in Sources */,
 				3664F3A71F7F137F00C2DC36 /* AppDelegate.swift in Sources */,

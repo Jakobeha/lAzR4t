@@ -19,6 +19,12 @@ class GameModel {
     static let empty: GameModel = GameModel.empty(size: GameModel.gameSize)
     
     let players: [PlayerDirection:PlayerModel]
+    var turrets: [TurretElem] {
+        return players.values.flatMap { $0.globalTurrets }
+    }
+    var playElems: [PlayElem] {
+        return players.values.flatMap { $0.playElems }
+    }
     
     ///Creates a GameModel to be put in a grid of `size`.
     private static func empty(size: CellSize) -> GameModel {

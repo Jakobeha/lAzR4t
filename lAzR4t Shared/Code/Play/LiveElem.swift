@@ -9,7 +9,7 @@
 import Foundation
 
 ///An element which can be damaged and destroyed
-class LiveElem: PlayElem {
+class LiveElem_base: Elem {
     let health: Int
     
     init(health: Int, pos: CellPos, size: CellSize) {
@@ -18,13 +18,25 @@ class LiveElem: PlayElem {
         super.init(pos: pos, size: size)
     }
     
-    func set(health newHealth: Int) -> LiveElem {
-        return LiveElem(health: newHealth, pos: self.pos, size: self.size)
+    override func equals(_ other: Elem) -> Bool {
+        guard let other = other as? LiveElem_base else {
+            return false
+        }
+        
+        return
+            super.equals(other) &&
+            (other.health == self.health)
     }
-    
+}
+
+protocol LiveElem: PlayElem where Self: LiveElem_base {
+    func set(health newHealth: Int) -> Self
+}
+
+extension LiveElem {
     ///Returns this element damaged if it survives,
     ///and doesn't return anything if it gets destroyed.
-    func damage(_ amount: Int) -> LiveElem? {
+    func damage(_ amount: Int) -> Self? {
         if (amount >= health) {
             return nil
         } else {
@@ -32,17 +44,7 @@ class LiveElem: PlayElem {
         }
     }
     
-    override func absorb(projectile: ProjectileElem) -> LiveElem? {
-        return self.damage(projectile.damage)
-    }
-    
-    override func equals(_ other: Elem) -> Bool {
-        guard let other = other as? LiveElem else {
-            return false
-        }
-        
-        return
-            super.equals(other) &&
-            (other.health == self.health)
+    func absorb(projectile: ProjectileElem) -> Self? {
+        return damage(projectile.damage)
     }
 }

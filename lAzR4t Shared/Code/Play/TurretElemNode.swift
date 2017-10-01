@@ -18,7 +18,7 @@ class TurretElemNode: ElemNode {
         fatalError("Can't decode TurretElemNode.")
     }
     
-    init(color: AttackColor, direction: CellDirection, isPlaceholder: Bool, pos: CellPos) {
+    init(healthRatio: CGFloat, color: AttackColor, direction: CellDirection, isPlaceholder: Bool, pos: CellPos) {
         barrel = ElemSpriteNode(imageNamed: "TurretBarrel")
         barrel.anchorPoint = CGPoint(x: 0, y: 0.5)
         barrel.zRotation = direction.toRotation
@@ -31,17 +31,17 @@ class TurretElemNode: ElemNode {
         head.zPosition = 2 //Above grid and barrel
         super.init()
         
-        alpha = isPlaceholder ? TurretElemNode.placeholderAlpha : 1
+        alpha = (isPlaceholder ? TurretElemNode.placeholderAlpha : 1) * healthRatio
         position = pos.toCenterDisplay
         addChild(barrel)
         addChild(head)
     }
     
-    func reconfigure(color: AttackColor, direction: CellDirection, isPlaceholder: Bool, pos: CellPos) {
+    func reconfigure(healthRatio: CGFloat, color: AttackColor, direction: CellDirection, isPlaceholder: Bool, pos: CellPos) {
         barrel.zRotation = direction.toRotation
         head.texture = SKTexture(imageNamed: "\(color.toString)Head")
         head.size = CellSize.unit.toDisplay
-        alpha = isPlaceholder ? TurretElemNode.placeholderAlpha : 1
+        alpha = (isPlaceholder ? TurretElemNode.placeholderAlpha : 1) * healthRatio
         position = pos.toCenterDisplay
     }
 }

@@ -17,6 +17,12 @@ class GameController {
         return GameModel(players: self.players.mapValues { $0.curModel })
     }
     var curModes: [String:Mode] = [:]
+    var turrets: [PlayElemController] {
+        return players.values.flatMap { $0.globalTurrets }
+    }
+    var playElems: [PlayElemController] {
+        return players.values.flatMap { $0.playElems }
+    }
     
     init() {
         let curModel = GameModel.empty
@@ -33,7 +39,11 @@ class GameController {
     private func regTurnMode() -> Mode {
         return players[PlayerDirection.left]!.turnMode(
             next: players[PlayerDirection.right]!.turnMode(
-                next: LazyMode(regTurnMode)
+                next: LazyMode { FireMode(
+                    turrets: self.curModel.turrets,
+                    collidables: self.playElems,
+                    nextMode: LazyMode(self.regTurnMode)
+                ) }
             )
         )
     }

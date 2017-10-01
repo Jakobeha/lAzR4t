@@ -16,6 +16,9 @@ class ElemController<TElem: Elem>: Equatable {
         )
     }
     let node: ElemNode?
+    private var _parent: GridController<TElem>?
+    var parent: GridController<TElem>? { return _parent }
+    var isInWorld: Bool
     
     static func ==(_ a: ElemController<TElem>, _ b: ElemController<TElem>) -> Bool {
         return a.curModel == b.curModel
@@ -23,6 +26,23 @@ class ElemController<TElem: Elem>: Equatable {
     
     init(node: ElemNode?) {
         self.node = node
+        self._parent = nil
+        self.isInWorld = true
+    }
+    
+    ///Removes this element from all parents and scenes.
+    ///Should remove it from connections to other elements.
+    ///You can't call this function on an already-removed element.
+    func removeFromWorld() {
+        assert(isInWorld, "Element has already been removed from the world -- can't remove twice.")
+        
+        node?.removeFromParent()
+        if let parent = parent {
+            //Has a parent
+            try! parent.removeOne(elem: self)
+        }
+        
+        isInWorld = false
     }
     
     ///Casts this controller's element to a superclass.
@@ -31,26 +51,15 @@ class ElemController<TElem: Elem>: Equatable {
     ///
     ///warning: Make sure that TElem2 conforms to TElem, or this will fail at runtime.
     func cast<TElem2: Elem>() -> ElemController<TElem2> {
-        return RefElemController<TElem2>(getCurModel: { self.curModel as! TElem2 }, node: self.node)
+        return ForeignCastElemController<TElem2, TElem>(orig: self)
     }
     
-    internal func _add(parent: GridController<TElem>) {
-        //Doesn't need to track parents
+    internal func _add(parent newParent: GridController<TElem>) {
+        assert(self._parent == nil, "Element controller can't have two parents")
+        self._parent = newParent
     }
     
     internal func _remove(parent: GridController<TElem>) {
-        //Doesn't need to track parents
-    }
-}
-
-///Just gets another element's properties.
-///Elements can be downcasted to this -- used for downcasting.
-fileprivate class RefElemController<TElem: Elem>: ElemController<TElem> {
-    override var curModel: TElem { return getCurModel() }
-    let getCurModel: () -> TElem
-    
-    init(getCurModel: @escaping () -> TElem, node: ElemNode?) {
-        self.getCurModel = getCurModel
-        super.init(node: node)
+        self._parent = nil
     }
 }

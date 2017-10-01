@@ -70,7 +70,7 @@ extension List where T == AttackColor {
         
         return
             (reds * AttackColor.red.damage * (greens + 1)) +
-            (greens * AttackColor.blue.damage) +
+            (greens * AttackColor.green.damage) +
             (blues * AttackColor.blue.damage) +
             (greys * AttackColor.grey.damage)
     }
@@ -82,9 +82,9 @@ extension List where T == AttackColor {
         let greys = count(of: AttackColor.grey)
         
         return
-            (reds * AttackColor.red.control * (greens + 1)) +
-            (greens * AttackColor.blue.control) +
-            (blues * AttackColor.blue.control) +
+            (reds * AttackColor.red.control) +
+            (greens * AttackColor.green.control) +
+            (blues * AttackColor.blue.control * (greens + 1)) +
             (greys * AttackColor.grey.damage)
     }
 }

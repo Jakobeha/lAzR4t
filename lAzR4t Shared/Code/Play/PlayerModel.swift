@@ -16,6 +16,13 @@ class PlayerModel {
     let turretField: GridElem<TurretElem>
     var turretGrid: Grid<TurretElem> { return turretField.grid }
     let heart: HeartElem
+    ///The player's turrets, in the model's own scope, not their local field.
+    var globalTurrets: [TurretElem] {
+        return turretGrid.elems.toArray.map { $0.offset(by: turretField.pos.toSize) }
+    }
+    var playElems: [PlayElem] {
+        return globalTurrets + [heart]
+    }
     
     ///Creates an empty player model for a grid of the given size, facing the given direction.
     ///Usually, the grid will be standard 15x10 size.

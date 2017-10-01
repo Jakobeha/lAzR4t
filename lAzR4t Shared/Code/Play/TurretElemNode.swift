@@ -9,6 +9,8 @@
 import SpriteKit
 
 class TurretElemNode: ElemNode {
+    private static let placeholderAlpha: CGFloat = 0.5
+    
     private let head: ElemSpriteNode
     private let barrel: ElemSpriteNode
     
@@ -16,24 +18,30 @@ class TurretElemNode: ElemNode {
         fatalError("Can't decode TurretElemNode.")
     }
     
-    init(color: AttackColor, direction: CellDirection, size: CellSize) {
+    init(color: AttackColor, direction: CellDirection, isPlaceholder: Bool, pos: CellPos) {
         barrel = ElemSpriteNode(imageNamed: "TurretBarrel")
         barrel.anchorPoint = CGPoint(x: 0, y: 0.5)
         barrel.zRotation = direction.toRotation
+        barrel.zPosition = 1 //Below head, but above grid
         head = ElemSpriteNode(
             texture: SKTexture(imageNamed: "\(color.toString)Head"),
             color: SKColor.white, //Color is in texture. This doesn't actually do anything.
-            size: size.toDisplay
+            size: CellSize.unit.toDisplay
         )
+        head.zPosition = 2 //Above grid and barrel
         super.init()
         
-        addChild(self.barrel)
-        addChild(self.head)
+        alpha = isPlaceholder ? TurretElemNode.placeholderAlpha : 1
+        position = pos.toCenterDisplay
+        addChild(barrel)
+        addChild(head)
     }
     
-    func reconfigure(color: AttackColor, direction: CellDirection, size: CellSize) {
-        self.barrel.zRotation = direction.toRotation
-        self.head.texture = SKTexture(imageNamed: "\(color.toString)Head")
-        self.head.size = size.toDisplay
+    func reconfigure(color: AttackColor, direction: CellDirection, isPlaceholder: Bool, pos: CellPos) {
+        barrel.zRotation = direction.toRotation
+        head.texture = SKTexture(imageNamed: "\(color.toString)Head")
+        head.size = CellSize.unit.toDisplay
+        alpha = isPlaceholder ? TurretElemNode.placeholderAlpha : 1
+        position = pos.toCenterDisplay
     }
 }

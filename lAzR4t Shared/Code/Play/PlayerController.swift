@@ -10,39 +10,50 @@ import Foundation
 
 ///Controls all of a player's stuff: turrets, actions, etc.
 class PlayerController {
-    let turretArea: GridElemController<TurretElem>
+    let direction: PlayerDirection
+    let turretField: GridElemController<TurretElem>
     let heart: HeartElemController
     var curModel: PlayerModel {
-        return PlayerModel(turretArea: turretArea.curModel, heart: heart.curModel)
+        return PlayerModel(direction: self.direction, turretField: turretField.curModel, heart: heart.curModel)
     }
-    var curTurretGrid: Grid<TurretElem> { return turretArea.curModel.grid }
+    var curTurretGrid: Grid<TurretElem> { return turretField.curModel.grid }
     
-    convenience init(parentSize: CellSize, direction: PlayerDirection) {
-        self.init(curModel: PlayerModel.empty(parentSize: parentSize, direction: direction))
+    convenience init(direction: PlayerDirection, parentSize: CellSize) {
+        self.init(curModel: PlayerModel.empty(direction: direction, parentSize: parentSize))
     }
     
     init(curModel: PlayerModel) {
-        turretArea = GridElemController(curModel: curModel.turretArea, display: true)
+        direction = curModel.direction
+        turretField = GridElemController(curModel: curModel.turretField, display: true)
         heart = HeartElemController(curModel: curModel.heart)
+    }
+    
+    ///This mode will let the player take their turn, adding a turret to their field, then move on.
+    func turnMode(next nextMode: Mode?) -> Mode {
+        return AddTurretMode(
+            playerDirection: direction,
+            turretGrid: turretField.grid,
+            next: nextMode
+        )
     }
 }
 
 extension GridController where TElem == Elem {
     ///Adds a player's elements to this grid
     func add(player: PlayerController) {
-        add(elem: player.turretArea.cast())
+        add(elem: player.turretField.cast())
         add(elem: player.heart.cast())
     }
     
     ///Removes exactly one player's elements from this grid
     func removeOne(player: PlayerController) throws {
-        try removeOne(elem: player.turretArea.cast())
+        try removeOne(elem: player.turretField.cast())
         try removeOne(elem: player.heart.cast())
     }
     
     ///Replaces exactly one player's elements from this grid
     func replaceOne(oldPlayer: PlayerController, newPlayer: PlayerController) throws {
-        try replaceOne(oldElem: oldPlayer.turretArea.cast(), newElem: newPlayer.turretArea.cast())
+        try replaceOne(oldElem: oldPlayer.turretField.cast(), newElem: newPlayer.turretField.cast())
         try replaceOne(oldElem: oldPlayer.heart.cast(), newElem: newPlayer.heart.cast())
     }
 }

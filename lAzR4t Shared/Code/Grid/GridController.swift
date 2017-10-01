@@ -9,7 +9,7 @@
 import Foundation
 
 class GridController<TElem: Elem>: Equatable {
-    private var _curModel: Grid<TElem>
+    internal var _curModel: Grid<TElem>
     var curModel: Grid<TElem> { return _curModel }
     private var _curElems: List<ElemController<TElem>>
     var curElems: List<ElemController<TElem>> { return _curElems }
@@ -32,6 +32,7 @@ class GridController<TElem: Elem>: Equatable {
     
     func add(elem: ElemController<TElem>) {
         _curModel = _curModel.add(elem: elem.curModel)
+        _curElems = elem + _curElems
         elem._add(parent: self)
         if let elemNode = elem.node {
             self.node.addChild(elemNode)
@@ -42,21 +43,19 @@ class GridController<TElem: Elem>: Equatable {
     func removeOne(elem: ElemController<TElem>) throws {
         elem._remove(parent: self)
         _curModel = try _curModel.removeOne(elem: elem.curModel)
+        _curElems = try _curElems.removeOne(elem)
         elem.node?.removeFromParent()
     }
     
     func replaceOne(oldElem: ElemController<TElem>, newElem: ElemController<TElem>) throws {
         oldElem._remove(parent: self)
         _curModel = try _curModel.replaceOne(oldElem: oldElem.curModel, newElem: newElem.curModel)
+        _curElems = try _curElems.replaceOne(oldElem, with: newElem)
         newElem._add(parent: self)
         oldElem.node?.removeFromParent()
         if let newElemNode = newElem.node {
             self.node.addChild(newElemNode)
         }
-    }
-    
-    internal func _replace(oldModel: TElem, newModel: TElem) {
-        _curModel = try! _curModel.replaceOne(oldElem: oldModel, newElem: newModel)
     }
 }
 

@@ -16,6 +16,7 @@ import Foundation
 struct Grid<TElem: Elem> {
     let elems: List<TElem>
     let size: CellSize
+    var bounds: CellFrame { return CellFrame(pos: CellPos.origin, size: self.size) }
     var width: Int { return size.width }
     var height: Int { return size.height }
     

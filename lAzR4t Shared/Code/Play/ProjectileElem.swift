@@ -29,4 +29,15 @@ class ProjectileElem: PlayElem {
         
         assert(!colors.isEmpty, "Projectile needs at least one color")
     }
+    
+    override func equals(_ other: Elem) -> Bool {
+        guard let other = other as? ProjectileElem else {
+            return false
+        }
+        
+        return
+            super.equals(other) &&
+            (other.colors == self.colors) &&
+            (other.direction == self.direction)
+    }
 }

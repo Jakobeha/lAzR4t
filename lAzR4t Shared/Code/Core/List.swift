@@ -163,6 +163,15 @@ enum List<T> {
             return try (satisfies(head) ? 1 : 0) + rest.count(onlyWhere: satisfies)
         }
     }
+    
+    func find(where satisfies: (T) throws -> Bool) rethrows -> T? {
+        switch self {
+        case .empty:
+            return nil
+        case .cons(let head, let rest):
+            return try satisfies(head) ? head : rest.find(where: satisfies)
+        }
+    }
 }
 
 extension List where T: Equatable {

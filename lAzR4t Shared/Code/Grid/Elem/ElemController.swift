@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ElemController<TElem: Elem> {
+class ElemController<TElem: Elem>: Equatable {
     var curModel: TElem {
         fatalError(
             "Not implemented. Don't make instances of this directly, use MinElemController or another subclass. " +
@@ -16,6 +16,10 @@ class ElemController<TElem: Elem> {
         )
     }
     let node: ElemNode?
+    
+    static func ==(_ a: ElemController<TElem>, _ b: ElemController<TElem>) -> Bool {
+        return a.curModel == b.curModel
+    }
     
     init(node: ElemNode?) {
         self.node = node

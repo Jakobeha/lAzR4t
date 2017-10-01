@@ -25,7 +25,7 @@ class GameModel {
         return GameModel(players: Dictionary(
             keys: PlayerDirection.all,
             valueGetter: { direction in
-                return PlayerModel.empty(parentSize: size, direction: direction)
+                return PlayerModel.empty(direction: direction, parentSize: size)
             }
         ))
     }

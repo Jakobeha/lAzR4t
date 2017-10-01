@@ -17,8 +17,6 @@ class GameController {
         return GameModel(players: self.players.mapValues { $0.curModel })
     }
     var curModes: [String:Mode] = [:]
-    var curControlModes: [String:ControlMode] { return curModes.flatMapValues { $0.controlMode } }
-    var curTimeModes: [String:TimeMode] { return curModes.flatMapValues { $0.timeMode } }
     
     init() {
         let curModel = GameModel.empty
@@ -28,6 +26,16 @@ class GameController {
         
         scene.controller = self
         players.values.forEach { grid.add(player: $0) }
+        
+        curModes["turn"] = regTurnMode()
+    }
+    
+    private func regTurnMode() -> Mode {
+        return players[PlayerDirection.left]!.turnMode(
+            next: players[PlayerDirection.right]!.turnMode(
+                next: LazyMode(regTurnMode)
+            )
+        )
     }
     
     private func add(elem: ElemController<Elem>) {
@@ -36,7 +44,7 @@ class GameController {
     
     func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
-        curModes = curModes.flatMapValues { $0.timeMode?.update(gameTime: currentTime) ?? [$0] }
+        curModes = curModes.flatMapValues { $0.update(gameTime: currentTime, in: self.grid) }
     }
 }
 
@@ -44,19 +52,19 @@ class GameController {
     // Touch-based event handling
     extension GameController {
         func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-            curModes = curModes.flatMapValues { $0.controlMode?.touchesBegan(touches, with: event) ?? [$0] }
+            curModes = curModes.flatMapValues { $0.touchesBegan(touches, with: event, in: self.grid) }
         }
         
         func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-            curModes = curModes.flatMapValues { $0.controlMode?.touchesMoved(touches, with: event) ?? [$0] }
+            curModes = curModes.flatMapValues { $0.touchesMoved(touches, with: event, in: self.grid) }
         }
         
         func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-            curModes = curModes.flatMapValues { $0.controlMode?.touchesEnded(touches, with: event) ?? [$0] }
+            curModes = curModes.flatMapValues { $0.touchesEnded(touches, with: event, in: self.grid) }
         }
         
         func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
-            curModes = curModes.flatMapValues { $0.controlMode?.touchesCancelled(touches, with: event) ?? [$0] }
+            curModes = curModes.flatMapValues { $0.touchesCancelled(touches, with: event, in: self.grid) }
         }
     }
 #endif
@@ -65,15 +73,15 @@ class GameController {
     // Mouse-based event handling
     extension GameController {
         func mouseDown(with event: NSEvent) {
-            curModes = curModes.flatMapValues { $0.controlMode?.mouseDown(with: event) ?? [$0] }
+            curModes = curModes.flatMapValues { $0.mouseDown(with: event, in: self.grid) }
         }
         
         func mouseDragged(with event: NSEvent) {
-            curModes = curModes.flatMapValues { $0.controlMode?.mouseDragged(with: event) ?? [$0] }
+            curModes = curModes.flatMapValues { $0.mouseDragged(with: event, in: self.grid) }
         }
         
         func mouseUp(with event: NSEvent) {
-            curModes = curModes.flatMapValues { $0.controlMode?.mouseUp(with: event) ?? [$0] }
+            curModes = curModes.flatMapValues { $0.mouseUp(with: event, in: self.grid) }
         }
     }
 #endif

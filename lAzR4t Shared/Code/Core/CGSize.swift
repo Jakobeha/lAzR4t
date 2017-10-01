@@ -15,4 +15,18 @@ extension CGSize {
             height: a.height + b.height
         )
     }
+    
+    static func *(_ a: CGSize, _ scale: CGFloat) -> CGSize {
+        return CGSize(
+            width: a.width * scale,
+            height: a.height * scale
+        )
+    }
+    
+    static func /(_ a: CGSize, _ scale: CGFloat) -> CGSize {
+        return CGSize(
+            width: a.width / scale,
+            height: a.height / scale
+        )
+    }
 }

@@ -35,4 +35,14 @@ class LiveElem: PlayElem {
     override func absorb(projectile: ProjectileElem) -> LiveElem? {
         return self.damage(projectile.damage)
     }
+    
+    override func equals(_ other: Elem) -> Bool {
+        guard let other = other as? LiveElem else {
+            return false
+        }
+        
+        return
+            super.equals(other) &&
+            (other.health == self.health)
+    }
 }

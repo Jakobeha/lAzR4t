@@ -18,8 +18,9 @@ class Elem: Equatable {
         return CellFrame.overlap(a.frame, b.frame)
     }
     
+    //WARN won't work for all elements; need to override in subclasses and make sure overriding works
     static func ==(_ a: Elem, _ b: Elem) -> Bool {
-        return a === b
+        return type(of: a) == type(of: b) && a.equals(b)
     }
     
     init(pos: CellPos, size: CellSize) {
@@ -37,5 +38,9 @@ class Elem: Equatable {
     
     final func offset(by offset: CellSize) -> Elem {
         return self.set(pos: self.pos + offset)
+    }
+    
+    func equals(_ other: Elem) -> Bool {
+        return self.pos == other.pos && self.size == other.size
     }
 }

@@ -30,4 +30,14 @@ class HeartElem: LiveElem {
         self.direction = direction
         super.init(health: health, pos: pos, size: size)
     }
+    
+    override func equals(_ other: Elem) -> Bool {
+        guard let other = other as? HeartElem else {
+            return false
+        }
+        
+        return
+            super.equals(other) &&
+            (other.direction == self.direction)
+    }
 }

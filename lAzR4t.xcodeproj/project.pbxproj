@@ -410,6 +410,8 @@
 		363C373C1F7F3D4D006ED4C9 /* Elem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Elem.swift; sourceTree = "<group>"; };
 		363C37561F7F4F69006ED4C9 /* GridElemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridElemController.swift; sourceTree = "<group>"; };
 		363C375C1F7F4F99006ED4C9 /* ElemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElemController.swift; sourceTree = "<group>"; };
+		363C39D21F81C05200E085AD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		363C39D31F81C07600E085AD /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		3664F3631F7F137E00C2DC36 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		3664F3651F7F137E00C2DC36 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		3664F3661F7F137E00C2DC36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -618,6 +620,8 @@
 		3664F35D1F7F137E00C2DC36 = {
 			isa = PBXGroup;
 			children = (
+				363C39D31F81C07600E085AD /* LICENSE */,
+				363C39D21F81C05200E085AD /* README.md */,
 				3664F3621F7F137E00C2DC36 /* lAzR4t Shared */,
 				3664F36D1F7F137E00C2DC36 /* lAzR4t iOS */,
 				3664F37F1F7F137E00C2DC36 /* lAzR4t watchOS App */,

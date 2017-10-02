@@ -56,6 +56,15 @@ final class ProjectileElem: PlayElem_base, PlayElem {
         }
     }
     
+    ///Whether this projectile should affect other projectiles before the other one:
+    ///projectiles need a specific order of affecting so that their order doesn't affect how they combine.
+    ///Projectiles with more control affect first,
+    ///so that when they combine with multiple less-control projectiles,
+    ///the less-control ones don't combine first, then control the bigger one.
+    func affectsBefore(_ other: ProjectileElem) -> Bool {
+        return self.control > other.control
+    }
+    
     override func equals(_ other: Elem) -> Bool {
         guard let other = other as? ProjectileElem else {
             return false

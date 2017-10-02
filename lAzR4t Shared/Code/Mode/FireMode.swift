@@ -9,7 +9,7 @@
 import Foundation
 
 class FireMode: ActionMode {
-    static let projectileUnitsPerSec: TimeInterval = 5
+    static let ticksPerSec: TimeInterval = 5
     
     let turrets: [TurretElem]
     var projectiles: [ProjectileElemController]
@@ -31,25 +31,27 @@ class FireMode: ActionMode {
     }
     
     ///Moves the projectiles' through cells in the game world, given an amount of real time.
+    ///Also *does* update their collisions.
     ///Returns the real time not used, which will carry over to the next update.
     private func moveProjectilesSemantic(by deltaTime: TimeInterval) -> TimeInterval {
-        for _ in 0..<Int64(floor(deltaTime * FireMode.projectileUnitsPerSec)) {
-            //Projectiles can be taken out of play by earlier projectiles.
-            projectiles.forEach { projectile in
+        for _ in 0..<Int64(floor(deltaTime * FireMode.ticksPerSec)) {
+            projectiles
+                .sorted { $0.curModel.affectsBefore($1.curModel) }
+                .forEach { projectile in
                 if (projectile.isInPlay) {
-                    projectile.moveOneUnit(affecting: collidables)
+                    projectile.moveOneTick(affecting: collidables)
                     collidables = collidables.filter { $0.isInPlay }
                 }
             }
             projectiles = projectiles.filter { $0.isInPlay }
         }
         
-        return deltaTime.truncatingRemainder(dividingBy: (1 / FireMode.projectileUnitsPerSec))
+        return deltaTime.truncatingRemainder(dividingBy: (1 / FireMode.ticksPerSec))
     }
     
     ///Moves the projectiles' nodes, altering how they look but not affecting gameplay mechanics.
     private func moveProjectileNodes(by deltaTime: TimeInterval) {
-        let nodeOffset = CGFloat(remainderTime * FireMode.projectileUnitsPerSec)
+        let nodeOffset = CGFloat(remainderTime * FireMode.ticksPerSec)
         projectiles.forEach { $0.displayOffset = nodeOffset }
     }
     

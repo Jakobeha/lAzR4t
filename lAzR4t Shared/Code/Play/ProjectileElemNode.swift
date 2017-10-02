@@ -49,9 +49,10 @@ class ProjectileElemNode: ElemSpriteNode {
             colors.contains(AttackColor.green) &&
             colors.contains(AttackColor.blue) {
             //The projectile is a ball, and this adds a little spin effect.
-            let unitProgress = (CGFloat(pos.x + pos.y) / (direction.isDiagonal ? 2 : 1)) + offset
+            let unitProgress = (CGFloat(abs(pos.x + pos.y)) / (direction.isDiagonal ? 2 : 1)) + offset
             let progress = unitProgress / ProjectileElemNode.unitsPerBallSpin
-            let extraRotation = progress * CGFloat.pi * 2
+            let scaledProgress = progress.remainder(dividingBy: 1)
+            let extraRotation = scaledProgress * CGFloat.pi * 2
             zRotation += extraRotation
         }
     }

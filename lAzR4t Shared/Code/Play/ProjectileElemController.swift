@@ -53,11 +53,15 @@ class ProjectileElemController: PlayElemController_impl<ProjectileElem> {
         super.init(curModel: curModel, node: node_spe)
     }
     
-    func moveOneUnit(affecting collidables: [PlayElemController]) {
+    ///Moves the projectile one in-game tick (time unit).
+    ///*Does* update any collisions.
+    func moveOneTick(affecting collidables: [PlayElemController]) {
         assert(isInPlay, "Projectile shouldn't be moved when it's out of play")
-        
         let newPos = pos + direction.unitOffset
-        let collideds = collidables.filter { $0.curModel_play.frame.contains(center: newPos) }
+        let newFrame = curModel.frame.offset(by: direction.unitOffset)
+        let collideds = collidables.filter {
+            CellFrame.overlap($0.curModel_play.frame, newFrame)
+        }
         
         var shouldRemove = false
         for collided in collideds {

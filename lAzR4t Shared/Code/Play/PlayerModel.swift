@@ -23,6 +23,7 @@ class PlayerModel {
     var playElems: [PlayElem] {
         return globalTurrets + [heart]
     }
+    var lost: Bool { return heart.health <= 0 }
     
     ///Creates an empty player model for a grid of the given size, facing the given direction.
     ///Usually, the grid will be standard 15x10 size.

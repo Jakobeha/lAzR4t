@@ -147,7 +147,7 @@
 		363C375E1F7F4F99006ED4C9 /* ElemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C375C1F7F4F99006ED4C9 /* ElemController.swift */; };
 		363C375F1F7F4F99006ED4C9 /* ElemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C375C1F7F4F99006ED4C9 /* ElemController.swift */; };
 		363C37601F7F4F99006ED4C9 /* ElemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C375C1F7F4F99006ED4C9 /* ElemController.swift */; };
-		365E32261F80C9DD0067F264 /* BlueGreenProjectile.png in Resources */ = {isa = PBXBuildFile; fileRef = 36DBE2241F80C50400D35836 /* BlueGreenProjectile.png */; };
+		365E32261F80C9DD0067F264 /* GreenBlueProjectile.png in Resources */ = {isa = PBXBuildFile; fileRef = 36DBE2241F80C50400D35836 /* GreenBlueProjectile.png */; };
 		365E32281F80C9DD0067F264 /* BlueProjectile.png in Resources */ = {isa = PBXBuildFile; fileRef = 36DBE2261F80C50400D35836 /* BlueProjectile.png */; };
 		365E322A1F80C9DD0067F264 /* GreenProjectile.png in Resources */ = {isa = PBXBuildFile; fileRef = 36DBE2281F80C50400D35836 /* GreenProjectile.png */; };
 		365E322C1F80C9DD0067F264 /* RedBlueProjectile.png in Resources */ = {isa = PBXBuildFile; fileRef = 36DBE22A1F80C50400D35836 /* RedBlueProjectile.png */; };
@@ -159,7 +159,7 @@
 		365E32381F80C9DD0067F264 /* GreenHead.png in Resources */ = {isa = PBXBuildFile; fileRef = 36DBE2381F80C50400D35836 /* GreenHead.png */; };
 		365E323A1F80C9DD0067F264 /* GreyHead.png in Resources */ = {isa = PBXBuildFile; fileRef = 36DBE23A1F80C50400D35836 /* GreyHead.png */; };
 		365E323C1F80C9DD0067F264 /* RedHead.png in Resources */ = {isa = PBXBuildFile; fileRef = 36DBE23C1F80C50400D35836 /* RedHead.png */; };
-		365E323E1F80C9E70067F264 /* BlueGreenProjectile.png in Resources */ = {isa = PBXBuildFile; fileRef = 36DBE2241F80C50400D35836 /* BlueGreenProjectile.png */; };
+		365E323E1F80C9E70067F264 /* GreenBlueProjectile.png in Resources */ = {isa = PBXBuildFile; fileRef = 36DBE2241F80C50400D35836 /* GreenBlueProjectile.png */; };
 		365E32401F80C9E70067F264 /* BlueProjectile.png in Resources */ = {isa = PBXBuildFile; fileRef = 36DBE2261F80C50400D35836 /* BlueProjectile.png */; };
 		365E32421F80C9E70067F264 /* GreenProjectile.png in Resources */ = {isa = PBXBuildFile; fileRef = 36DBE2281F80C50400D35836 /* GreenProjectile.png */; };
 		365E32441F80C9E70067F264 /* RedBlueProjectile.png in Resources */ = {isa = PBXBuildFile; fileRef = 36DBE22A1F80C50400D35836 /* RedBlueProjectile.png */; };
@@ -171,7 +171,7 @@
 		365E32501F80C9E70067F264 /* GreenHead.png in Resources */ = {isa = PBXBuildFile; fileRef = 36DBE2381F80C50400D35836 /* GreenHead.png */; };
 		365E32521F80C9E70067F264 /* GreyHead.png in Resources */ = {isa = PBXBuildFile; fileRef = 36DBE23A1F80C50400D35836 /* GreyHead.png */; };
 		365E32541F80C9E70067F264 /* RedHead.png in Resources */ = {isa = PBXBuildFile; fileRef = 36DBE23C1F80C50400D35836 /* RedHead.png */; };
-		365E32561F80C9F50067F264 /* BlueGreenProjectile.png in Resources */ = {isa = PBXBuildFile; fileRef = 36DBE2241F80C50400D35836 /* BlueGreenProjectile.png */; };
+		365E32561F80C9F50067F264 /* GreenBlueProjectile.png in Resources */ = {isa = PBXBuildFile; fileRef = 36DBE2241F80C50400D35836 /* GreenBlueProjectile.png */; };
 		365E32581F80C9F50067F264 /* BlueProjectile.png in Resources */ = {isa = PBXBuildFile; fileRef = 36DBE2261F80C50400D35836 /* BlueProjectile.png */; };
 		365E325A1F80C9F50067F264 /* GreenProjectile.png in Resources */ = {isa = PBXBuildFile; fileRef = 36DBE2281F80C50400D35836 /* GreenProjectile.png */; };
 		365E325C1F80C9F50067F264 /* RedBlueProjectile.png in Resources */ = {isa = PBXBuildFile; fileRef = 36DBE22A1F80C50400D35836 /* RedBlueProjectile.png */; };
@@ -183,7 +183,7 @@
 		365E32681F80C9F50067F264 /* GreenHead.png in Resources */ = {isa = PBXBuildFile; fileRef = 36DBE2381F80C50400D35836 /* GreenHead.png */; };
 		365E326A1F80C9F50067F264 /* GreyHead.png in Resources */ = {isa = PBXBuildFile; fileRef = 36DBE23A1F80C50400D35836 /* GreyHead.png */; };
 		365E326C1F80C9F60067F264 /* RedHead.png in Resources */ = {isa = PBXBuildFile; fileRef = 36DBE23C1F80C50400D35836 /* RedHead.png */; };
-		365E326E1F80CA000067F264 /* BlueGreenProjectile.png in Resources */ = {isa = PBXBuildFile; fileRef = 36DBE2241F80C50400D35836 /* BlueGreenProjectile.png */; };
+		365E326E1F80CA000067F264 /* GreenBlueProjectile.png in Resources */ = {isa = PBXBuildFile; fileRef = 36DBE2241F80C50400D35836 /* GreenBlueProjectile.png */; };
 		365E32701F80CA000067F264 /* BlueProjectile.png in Resources */ = {isa = PBXBuildFile; fileRef = 36DBE2261F80C50400D35836 /* BlueProjectile.png */; };
 		365E32721F80CA000067F264 /* GreenProjectile.png in Resources */ = {isa = PBXBuildFile; fileRef = 36DBE2281F80C50400D35836 /* GreenProjectile.png */; };
 		365E32741F80CA000067F264 /* RedBlueProjectile.png in Resources */ = {isa = PBXBuildFile; fileRef = 36DBE22A1F80C50400D35836 /* RedBlueProjectile.png */; };
@@ -382,17 +382,17 @@
 		361FF8D71F80B2C600B9465C /* RotateTurretMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotateTurretMode.swift; sourceTree = "<group>"; };
 		361FF8D81F80B2C600B9465C /* LazyMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyMode.swift; sourceTree = "<group>"; };
 		361FF8D91F80B2C600B9465C /* Mode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mode.swift; sourceTree = "<group>"; };
-		361FF8F31F80B44100B9465C /* ButtonElem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonElem.swift; sourceTree = "<group>"; };
-		361FF8F41F80B44100B9465C /* ColorButtonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorButtonController.swift; sourceTree = "<group>"; };
-		361FF8F51F80B44100B9465C /* ColorButtonElem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorButtonElem.swift; sourceTree = "<group>"; };
-		361FF8F61F80B44100B9465C /* ColorButtonNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorButtonNode.swift; sourceTree = "<group>"; };
-		361FF90C1F80B4E100B9465C /* ColorDropDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorDropDown.swift; sourceTree = "<group>"; };
-		361FF9111F80B55E00B9465C /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Event.swift; path = "../../../../lAzR4t old/lAzR4t Shared/Code/Core/Event.swift"; sourceTree = "<group>"; };
-		361FF9161F80B59000B9465C /* CellDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CellDirection.swift; path = "../../../../../../lAzR4t old/lAzR4t Shared/Code/Grid/Elem/Cell/CellDirection.swift"; sourceTree = "<group>"; };
-		361FF9171F80B59000B9465C /* CellDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CellDisplay.swift; path = "../../../../../../lAzR4t old/lAzR4t Shared/Code/Grid/Elem/Cell/CellDisplay.swift"; sourceTree = "<group>"; };
-		361FF9181F80B59000B9465C /* CellSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CellSize.swift; path = "../../../../../../lAzR4t old/lAzR4t Shared/Code/Grid/Elem/Cell/CellSize.swift"; sourceTree = "<group>"; };
-		361FF9191F80B59000B9465C /* CellFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CellFrame.swift; path = "../../../../../../lAzR4t old/lAzR4t Shared/Code/Grid/Elem/Cell/CellFrame.swift"; sourceTree = "<group>"; };
-		361FF91A1F80B59000B9465C /* CellPos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CellPos.swift; path = "../../../../../../lAzR4t old/lAzR4t Shared/Code/Grid/Elem/Cell/CellPos.swift"; sourceTree = "<group>"; };
+		361FF8F31F80B44100B9465C /* ButtonElem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ButtonElem.swift; path = "../../../../lAzR4t/lAzR4t Shared/Code/UI/ButtonElem.swift"; sourceTree = "<group>"; };
+		361FF8F41F80B44100B9465C /* ColorButtonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ColorButtonController.swift; path = "../../../../lAzR4t/lAzR4t Shared/Code/UI/ColorButtonController.swift"; sourceTree = "<group>"; };
+		361FF8F51F80B44100B9465C /* ColorButtonElem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ColorButtonElem.swift; path = "../../../../lAzR4t/lAzR4t Shared/Code/UI/ColorButtonElem.swift"; sourceTree = "<group>"; };
+		361FF8F61F80B44100B9465C /* ColorButtonNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ColorButtonNode.swift; path = "../../../../lAzR4t/lAzR4t Shared/Code/UI/ColorButtonNode.swift"; sourceTree = "<group>"; };
+		361FF90C1F80B4E100B9465C /* ColorDropDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ColorDropDown.swift; path = "../../../../lAzR4t/lAzR4t Shared/Code/UI/ColorDropDown.swift"; sourceTree = "<group>"; };
+		361FF9111F80B55E00B9465C /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		361FF9161F80B59000B9465C /* CellDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellDirection.swift; sourceTree = "<group>"; };
+		361FF9171F80B59000B9465C /* CellDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellDisplay.swift; sourceTree = "<group>"; };
+		361FF9181F80B59000B9465C /* CellSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellSize.swift; sourceTree = "<group>"; };
+		361FF9191F80B59000B9465C /* CellFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellFrame.swift; sourceTree = "<group>"; };
+		361FF91A1F80B59000B9465C /* CellPos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellPos.swift; sourceTree = "<group>"; };
 		36232A521F7F9091001656ED /* PlayerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerController.swift; sourceTree = "<group>"; };
 		36232A541F7F90EA001656ED /* PlayerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerModel.swift; sourceTree = "<group>"; };
 		36232A641F7F922F001656ED /* LiveElem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveElem.swift; sourceTree = "<group>"; };
@@ -448,12 +448,12 @@
 		367808891F80F38000816249 /* PlayElemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayElemController.swift; sourceTree = "<group>"; };
 		369228881F80E0FC00F5862A /* FireMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireMode.swift; sourceTree = "<group>"; };
 		36B2563D1F811BD500BCCC97 /* ForeignCastElemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForeignCastElemController.swift; sourceTree = "<group>"; };
-		36C065F51F80CCFB00D36D04 /* BlueButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BlueButton.png; path = "../../../../lAzR4t old/lAzR4t Shared/Textures/Button/BlueButton.png"; sourceTree = "<group>"; };
-		36C065F61F80CCFB00D36D04 /* BlueButtonSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BlueButtonSelected.png; path = "../../../../lAzR4t old/lAzR4t Shared/Textures/Button/BlueButtonSelected.png"; sourceTree = "<group>"; };
-		36C065F71F80CCFB00D36D04 /* GreenButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GreenButton.png; path = "../../../../lAzR4t old/lAzR4t Shared/Textures/Button/GreenButton.png"; sourceTree = "<group>"; };
-		36C065F81F80CCFB00D36D04 /* RedButtonSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RedButtonSelected.png; path = "../../../../lAzR4t old/lAzR4t Shared/Textures/Button/RedButtonSelected.png"; sourceTree = "<group>"; };
-		36C065F91F80CCFB00D36D04 /* RedButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RedButton.png; path = "../../../../lAzR4t old/lAzR4t Shared/Textures/Button/RedButton.png"; sourceTree = "<group>"; };
-		36C065FA1F80CCFB00D36D04 /* GreenButtonSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GreenButtonSelected.png; path = "../../../../lAzR4t old/lAzR4t Shared/Textures/Button/GreenButtonSelected.png"; sourceTree = "<group>"; };
+		36C065F51F80CCFB00D36D04 /* BlueButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BlueButton.png; sourceTree = "<group>"; };
+		36C065F61F80CCFB00D36D04 /* BlueButtonSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BlueButtonSelected.png; sourceTree = "<group>"; };
+		36C065F71F80CCFB00D36D04 /* GreenButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GreenButton.png; sourceTree = "<group>"; };
+		36C065F81F80CCFB00D36D04 /* RedButtonSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RedButtonSelected.png; sourceTree = "<group>"; };
+		36C065F91F80CCFB00D36D04 /* RedButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RedButton.png; sourceTree = "<group>"; };
+		36C065FA1F80CCFB00D36D04 /* GreenButtonSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GreenButtonSelected.png; sourceTree = "<group>"; };
 		36C065FB1F80CE2800D36D04 /* CGPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGPoint.swift; sourceTree = "<group>"; };
 		36C3B7321F8113EA00DEA5ED /* ForeignPlayElemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForeignPlayElemController.swift; sourceTree = "<group>"; };
 		36CB4FF01F7FFAED0083934F /* TurretElemNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurretElemNode.swift; sourceTree = "<group>"; };
@@ -462,7 +462,7 @@
 		36CB50021F8001110083934F /* CGSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGSize.swift; sourceTree = "<group>"; };
 		36CDFE651F800F5500B0807B /* HeartElemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartElemController.swift; sourceTree = "<group>"; };
 		36CDFE6A1F800F8000B0807B /* HeartElemNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartElemNode.swift; sourceTree = "<group>"; };
-		36DBE2241F80C50400D35836 /* BlueGreenProjectile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BlueGreenProjectile.png; sourceTree = "<group>"; };
+		36DBE2241F80C50400D35836 /* GreenBlueProjectile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GreenBlueProjectile.png; sourceTree = "<group>"; };
 		36DBE2261F80C50400D35836 /* BlueProjectile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BlueProjectile.png; sourceTree = "<group>"; };
 		36DBE2281F80C50400D35836 /* GreenProjectile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GreenProjectile.png; sourceTree = "<group>"; };
 		36DBE22A1F80C50400D35836 /* RedBlueProjectile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RedBlueProjectile.png; sourceTree = "<group>"; };
@@ -474,8 +474,8 @@
 		36DBE2381F80C50400D35836 /* GreenHead.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GreenHead.png; sourceTree = "<group>"; };
 		36DBE23A1F80C50400D35836 /* GreyHead.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GreyHead.png; sourceTree = "<group>"; };
 		36DBE23C1F80C50400D35836 /* RedHead.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RedHead.png; sourceTree = "<group>"; };
-		36F2B7581F80BC3900090749 /* TurretElem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TurretElem.swift; path = "../../../../lAzR4t old/lAzR4t Shared/Code/Play/TurretElem.swift"; sourceTree = "<group>"; };
-		36F2B75D1F80BC5B00090749 /* PlayerDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PlayerDirection.swift; path = "../../../../lAzR4t old/lAzR4t Shared/Code/Play/PlayerDirection.swift"; sourceTree = "<group>"; };
+		36F2B7581F80BC3900090749 /* TurretElem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurretElem.swift; sourceTree = "<group>"; };
+		36F2B75D1F80BC5B00090749 /* PlayerDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDirection.swift; sourceTree = "<group>"; };
 		36F6F71D1F80C18F00C446C3 /* Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -527,8 +527,7 @@
 				3617C2001F80E26B0096BD8F /* ActionMode.swift */,
 				361FF8D91F80B2C600B9465C /* Mode.swift */,
 			);
-			name = Mode;
-			path = "../../../lAzR4t old/lAzR4t Shared/Code/Mode";
+			path = Mode;
 			sourceTree = "<group>";
 		};
 		361FF8D31F80B2C600B9465C /* AddTurretTurnMode */ = {
@@ -781,7 +780,7 @@
 		36DBE2231F80C50400D35836 /* Projectile */ = {
 			isa = PBXGroup;
 			children = (
-				36DBE2241F80C50400D35836 /* BlueGreenProjectile.png */,
+				36DBE2241F80C50400D35836 /* GreenBlueProjectile.png */,
 				36DBE2261F80C50400D35836 /* BlueProjectile.png */,
 				36DBE2281F80C50400D35836 /* GreenProjectile.png */,
 				36DBE22A1F80C50400D35836 /* RedBlueProjectile.png */,
@@ -991,7 +990,7 @@
 				36C066031F80D04A00D36D04 /* GreenButtonSelected.png in Resources */,
 				36C066041F80D04A00D36D04 /* RedButton.png in Resources */,
 				36C066051F80D04A00D36D04 /* RedButtonSelected.png in Resources */,
-				365E326E1F80CA000067F264 /* BlueGreenProjectile.png in Resources */,
+				365E326E1F80CA000067F264 /* GreenBlueProjectile.png in Resources */,
 				365E32701F80CA000067F264 /* BlueProjectile.png in Resources */,
 				365E32721F80CA000067F264 /* GreenProjectile.png in Resources */,
 				365E32741F80CA000067F264 /* RedBlueProjectile.png in Resources */,
@@ -1020,7 +1019,7 @@
 				36C066091F80D05400D36D04 /* GreenButtonSelected.png in Resources */,
 				36C0660A1F80D05400D36D04 /* RedButton.png in Resources */,
 				36C0660B1F80D05400D36D04 /* RedButtonSelected.png in Resources */,
-				365E32561F80C9F50067F264 /* BlueGreenProjectile.png in Resources */,
+				365E32561F80C9F50067F264 /* GreenBlueProjectile.png in Resources */,
 				365E32581F80C9F50067F264 /* BlueProjectile.png in Resources */,
 				365E325A1F80C9F50067F264 /* GreenProjectile.png in Resources */,
 				365E325C1F80C9F50067F264 /* RedBlueProjectile.png in Resources */,
@@ -1054,7 +1053,7 @@
 				36C0660F1F80D05D00D36D04 /* GreenButtonSelected.png in Resources */,
 				36C066101F80D05D00D36D04 /* RedButton.png in Resources */,
 				36C066111F80D05D00D36D04 /* RedButtonSelected.png in Resources */,
-				365E323E1F80C9E70067F264 /* BlueGreenProjectile.png in Resources */,
+				365E323E1F80C9E70067F264 /* GreenBlueProjectile.png in Resources */,
 				365E32401F80C9E70067F264 /* BlueProjectile.png in Resources */,
 				365E32421F80C9E70067F264 /* GreenProjectile.png in Resources */,
 				365E32441F80C9E70067F264 /* RedBlueProjectile.png in Resources */,
@@ -1082,7 +1081,7 @@
 				36C066151F80D06900D36D04 /* GreenButtonSelected.png in Resources */,
 				36C066161F80D06900D36D04 /* RedButton.png in Resources */,
 				36C066171F80D06900D36D04 /* RedButtonSelected.png in Resources */,
-				365E32261F80C9DD0067F264 /* BlueGreenProjectile.png in Resources */,
+				365E32261F80C9DD0067F264 /* GreenBlueProjectile.png in Resources */,
 				365E32281F80C9DD0067F264 /* BlueProjectile.png in Resources */,
 				365E322A1F80C9DD0067F264 /* GreenProjectile.png in Resources */,
 				365E322C1F80C9DD0067F264 /* RedBlueProjectile.png in Resources */,

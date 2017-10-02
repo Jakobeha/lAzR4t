@@ -10,7 +10,7 @@ import Foundation
 
 ///Each player has one of these. When destroyed, they lose the game.
 final class HeartElem: LiveElem_base, LiveElem {
-    static let initHealth: Int = 2500
+    static let initHealth: Int = 5000
     
     let direction: PlayerDirection
     ///The amount of health this has compared to its initial health.

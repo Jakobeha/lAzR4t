@@ -24,6 +24,15 @@ enum PlayerDirection {
         }
     }
     
+    var toCellDirection: CellDirection {
+        switch self {
+        case .left:
+            return CellDirection.left
+        case .right:
+            return CellDirection.right
+        }
+    }
+    
     ///Creates a frame of the inner size anchored to this side of the outer size.
     func anchor(_ innerSize: CellSize, in outerSize: CellSize) -> CellFrame {
         switch self {

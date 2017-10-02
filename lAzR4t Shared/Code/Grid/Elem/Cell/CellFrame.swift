@@ -43,6 +43,14 @@ class CellFrame {
         return self.set(pos: self.pos + offset)
     }
     
+    //Whether the rectangle contains a position at the center of a cell:
+    //e.g. 0,0 would be the cell at the absolute coordinate 0.5,0.5
+    func contains(center pos: CellPos) -> Bool {
+        return
+            (left <= pos.x && pos.x < right) &&
+            (bottom <= pos.y && pos.y < top)
+    }
+    
     static func overlap(_ a: CellFrame, _ b: CellFrame) -> Bool {
         let horizOverlaps =
             (a.left < b.right && a.right > b.left) ||

@@ -9,6 +9,8 @@
 import SpriteKit
 
 class ProjectileElemNode: ElemSpriteNode {
+    static let unitsPerBallSpin: CGFloat = 3
+    
     ///The extra size a projectile gets for its colors
     static func bonusSize(colors: List<AttackColor>) -> CGSize {
         let bonus = bonusSideLength(colors: colors)
@@ -30,18 +32,28 @@ class ProjectileElemNode: ElemSpriteNode {
             size: CellSize.unit.toDisplay + ProjectileElemNode.bonusSize(colors: colors)
         )
         
-        reconfigure(direction: direction, pos: pos, offset: offset)
+        reconfigureNoTexture(colors: colors, direction: direction, pos: pos, offset: offset)
     }
     
     func reconfigure(colors: List<AttackColor>, direction: CellDirection, pos: CellPos, offset: CGFloat) {
         texture = SKTexture(imageNamed: "\(colors.toSetString)Projectile")
         size = CellSize.unit.toDisplay + ProjectileElemNode.bonusSize(colors: colors)
-        reconfigure(direction: direction, pos: pos, offset: offset)
+        reconfigureNoTexture(colors: colors, direction: direction, pos: pos, offset: offset)
     }
     
-    func reconfigure(direction: CellDirection, pos: CellPos, offset: CGFloat) {
+    func reconfigureNoTexture(colors: List<AttackColor>, direction: CellDirection, pos: CellPos, offset: CGFloat) {
         zRotation = direction.toRotation
         position = pos.toCenterDisplay + direction.displayOffset(in: offset)
+        
+        if colors.contains(AttackColor.red) &&
+            colors.contains(AttackColor.green) &&
+            colors.contains(AttackColor.blue) {
+            //The projectile is a ball, and this adds a little spin effect.
+            let unitProgress = (CGFloat(pos.x + pos.y) / (direction.isDiagonal ? 2 : 1)) + offset
+            let progress = unitProgress / ProjectileElemNode.unitsPerBallSpin
+            let extraRotation = progress * CGFloat.pi * 2
+            zRotation += extraRotation
+        }
     }
 }
 

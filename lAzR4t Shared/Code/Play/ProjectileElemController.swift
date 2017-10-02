@@ -33,7 +33,8 @@ class ProjectileElemController: PlayElemController_impl<ProjectileElem> {
         get { return _displayOffset }
         set(newDisplayOffset) {
             _displayOffset = newDisplayOffset
-            node_spe.reconfigure(
+            node_spe.reconfigureNoTexture(
+                colors: curModel.colors,
                 direction: curModel.direction,
                 pos: curModel.pos,
                 offset: self.displayOffset

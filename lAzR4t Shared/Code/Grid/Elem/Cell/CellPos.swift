@@ -8,11 +8,8 @@
 
 import Foundation
 
-struct CellPos {
+struct CellPos: Equatable {
     static let origin: CellPos = CellPos(x: 0, y: 0)
-    
-    let x: Int
-    let y: Int
     
     static func +(_ a: CellPos, _ b: CellSize) -> CellPos {
         return CellPos(x: a.x + b.width, y: a.y + b.height)
@@ -26,7 +23,18 @@ struct CellPos {
         return CellSize(width: a.x - b.x, height: a.y - b.y)
     }
     
+    static func ==(_ a: CellPos, _ b: CellPos) -> Bool {
+        return a.x == b.x && a.y == b.y
+    }
+    
+    let x: Int
+    let y: Int
+    
     var toSize: CellSize {
         return CellSize(width: x, height: y)
+    }
+    
+    func direction(of other: CellPos) -> CellDirection {
+        return (other - self).direction
     }
 }

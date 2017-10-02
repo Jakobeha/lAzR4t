@@ -23,11 +23,27 @@ extension Int {
     var toDisplay: CGFloat {
         return CGFloat(self) * CellDisplay.sideLength
     }
+    
+    init(fromDisplay dispNum: CGFloat) {
+        self = Int(floorf(Float(dispNum / CellDisplay.sideLength)))
+    }
 }
 
 extension CellPos {
     var toDisplay: CGPoint {
         return self * CellDisplay.sideLength
+    }
+    
+    ///Where a unit element centered in a cell with would be with this position
+    var toCenterDisplay: CGPoint {
+        return toDisplay + (CellSize.unit.toDisplay / 2)
+    }
+    
+    init(fromDisplay dispPos: CGPoint) {
+        self.init(
+            x: Int(fromDisplay: dispPos.x),
+            y: Int(fromDisplay: dispPos.y)
+        )
     }
 }
 

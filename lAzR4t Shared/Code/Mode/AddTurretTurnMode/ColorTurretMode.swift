@@ -40,7 +40,7 @@ class ColorTurretMode: Mode {
             AttackColor.blue
         ], at: dropDownPos)
         rootGrid.add(elem: curDropDown!.controller.cast())
-        selectOne(at: CellPos.origin)
+        selectOne(at: dropDownPos)
         return [self]
     }
     ///Returns the modes which will replace this one for future events.

@@ -21,7 +21,7 @@ class ColorDropDown {
             return ColorButtonController(curModel: ColorButtonElem(
                 color: color,
                 isSelected: false,
-                pos: CellPos(x: 0, y: index)
+                pos: CellPos(x: 0, y: colors.count - index - 1)
             ))
         }
         self.controller = GridElemController(

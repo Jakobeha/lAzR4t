@@ -552,8 +552,7 @@
 				361FF8F61F80B44100B9465C /* ColorButtonNode.swift */,
 				361FF8F31F80B44100B9465C /* ButtonElem.swift */,
 			);
-			name = UI;
-			path = "../../../lAzR4t old/lAzR4t Shared/Code/UI";
+			path = UI;
 			sourceTree = "<group>";
 		};
 		36232A691F7F9237001656ED /* Play */ = {
